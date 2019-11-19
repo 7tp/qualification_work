@@ -3,6 +3,7 @@
 @import url(./_text/result__card_text.css);
 @import url(./_source/result__card_source.css);
 @import url(./_info/result__card_info.css);
+@import url(./_info-text/result__card_info-text.css);
 
 .result__card {
   max-height: 576px;

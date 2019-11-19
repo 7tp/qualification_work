@@ -11,7 +11,7 @@
   <meta name="author" content="Руслан Винокуров">
   <title>NewsAnalyzer</title>
 <!---    <link rel="stylesheet" href="style.css"> -->
-  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.analyst.css %>">
 </head>
 <body>
   <div class="root">
@@ -28,7 +28,7 @@
     <section class="about-project">
       <div class="about-project__navigation">
           <a href="./index.html" class="link">Главная</a>
-          <span class="link__inactive"> / </span>
+          <span class="link"> / </span>
           <a href="./analyst.html" class="link">Аналитика</a>
       </div>
       <h2 class="about-project__title title"><span>Вы спросили: «</span><span class="about-project__title_insert"></span><span>»</span></h2>
@@ -41,19 +41,19 @@
     <section class="analyst">
       <h3 class="analyst__subtitle subtitle">Аналитика по дням</h3>
       <div class="analyst__grid">
-        <div class="analyst__grid_header">
+        <div class="analyst__grid-header">
           Дата
-          <div class="analyst__grid_header_month">(<span class="analyst__date-insert">август</span>)</div>
+          <div class="analyst__grid-header_month">(<span class="analyst__date-insert">август</span>)</div>
         </div>
-        <div class="analyst__grid_header">Кол-во упоминаний</div>
-        <div class="analyst__grid_scale scale1">
+        <div class="analyst__grid-header">Кол-во упоминаний</div>
+        <div class="analyst__grid-scale analyst__grid-scale1">
           <div>0</div>
           <div>25</div>
           <div>50</div>
           <div>75</div>
           <div>100</div>
         </div>
-        <div class="analyst__grid_date">
+        <div class="analyst__grid-date">
           <div>16, сб</div>
           <div>16, сб</div>
           <div>16, сб</div>
@@ -62,16 +62,16 @@
           <div>16, сб</div>
           <div>16, сб</div>
         </div>
-        <div class="analyst__grid_graph">
-          <div class="analyst__grid_graph_pic"><div class="analyst__grid_graph_volume">35</div></div>
-          <div class="analyst__grid_graph_pic"><div class="analyst__grid_graph_volume">35</div></div>
-          <div class="analyst__grid_graph_pic"><div class="analyst__grid_graph_volume">35</div></div>
-          <div class="analyst__grid_graph_pic"><div class="analyst__grid_graph_volume">35</div></div>
-          <div class="analyst__grid_graph_pic"><div class="analyst__grid_graph_volume">35</div></div>
-          <div class="analyst__grid_graph_pic"><div class="analyst__grid_graph_volume">35</div></div>
-          <div class="analyst__grid_graph_pic"><div class="analyst__grid_graph_volume">35</div></div>
+        <div class="analyst__grid-graph">
+          <div class="analyst__grid-graph_pic"><div class="analyst__grid-graph_volume">35</div></div>
+          <div class="analyst__grid-graph_pic"><div class="analyst__grid-graph_volume">35</div></div>
+          <div class="analyst__grid-graph_pic"><div class="analyst__grid-graph_volume">35</div></div>
+          <div class="analyst__grid-graph_pic"><div class="analyst__grid-graph_volume">35</div></div>
+          <div class="analyst__grid-graph_pic"><div class="analyst__grid-graph_volume">35</div></div>
+          <div class="analyst__grid-graph_pic"><div class="analyst__grid-graph_volume">35</div></div>
+          <div class="analyst__grid-graph_pic"><div class="analyst__grid-graph_volume">35</div></div>
         </div>
-        <div class="analyst__grid_scale scale2">
+        <div class="analyst__grid-scale analyst__grid-scale2">
           <div>0</div>
           <div>25</div>
           <div>50</div>

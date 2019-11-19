@@ -1,5 +1,3 @@
-@import url(./_text/result__card_info_text.css);
-
 .result__card_info {
   display: flex;
   flex-direction: column;

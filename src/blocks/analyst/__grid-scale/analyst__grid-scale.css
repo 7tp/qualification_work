@@ -1,0 +1,18 @@
+.analyst__grid-scale {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 13px;
+
+  color: #b6bcbf;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+
+@media screen and (max-width: 400px) {
+  .analyst__grid-scale {
+    display: none;
+  }
+}

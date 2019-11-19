@@ -10,14 +10,14 @@ const presets = [
         android: "67",
         ios: "10",
       },
-      useBuiltIns: "usage", // настройка babel-polyfill, usage: полифилы будут подставлятся для версий браузеров которые указаны выше.
+      useBuiltIns: "usage",
       corejs: "3.1.4",
-           "targets": { // цели, для полифилов
-              "esmodules": true, // es модули
+           "targets": {
+              "esmodules": true,
                "ie": "11",
          }
     },
   ],
 ];
 
-module.exports = { presets };
+//module.exports = { presets };

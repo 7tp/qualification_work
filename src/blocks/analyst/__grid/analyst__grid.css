@@ -1,8 +1,3 @@
-@import url(./_header/analyst__grid_header.css);
-@import url(./_scale/analyst__grid_scale.css);
-@import url(./_date/analyst__grid_date.css);
-@import url(./_graph/analyst__grid_graph.css);
-
 .analyst__grid {
   display: grid;
   grid-template-columns: 104fr 1128fr;

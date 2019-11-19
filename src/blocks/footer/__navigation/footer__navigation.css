@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 48px;
-  color: #1a1b22;
 }
 
 .footer__navigation a {

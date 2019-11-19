@@ -1,2 +1,2 @@
 'use strict'
-import "./style.css";
+import "./pages/about.css";

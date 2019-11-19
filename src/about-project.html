@@ -11,7 +11,7 @@
     <meta name="author" content="Руслан Винокуров">
     <title>NewsAnalyzer</title>
 <!---    <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
 <body>
   <div class="root">
@@ -75,7 +75,7 @@
       <div class="commits__header">
         <h3 class="commits__header_title title">История коммитов из GitHub</h3>
         <a class="link commits__header_link">Открыть в Github
-          <img class="arrow" src="img/arrow.svg" alt="arrow">
+          <img class="arrow" src="<%=require('./img/arrow.svg')%>" alt="arrow">
         </a>
       </div>
       <div class="commits__blocks">

@@ -1,4 +1,11 @@
 @import url(./__grid/analyst__grid.css);
+@import url(./__grid-header/analyst__grid-header.css);
+@import url(./__grid-scale/analyst__grid-scale.css);
+@import url(./__grid-scale1/analyst__grid-scale1.css);
+@import url(./__grid-scale2/analyst__grid-scale2.css);
+@import url(./__grid-date/analyst__grid-date.css);
+@import url(./__grid-graph/analyst__grid-graph.css);
+@import url(./__subtitle/analyst__subtitle.css);
 
 .analyst {
   background-color: #f5f6f7;
