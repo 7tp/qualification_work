@@ -1,0 +1,28 @@
+.result__loading_circle-preloader {
+  display: flex;
+  justify-content: center;
+	width: 74px;
+	height: 74px;
+  border-radius: 50%;
+
+  background: linear-gradient(90deg, #f5f6f7 1%, #1a1b22 100%);
+
+	margin: 0 auto 0 auto;
+
+	animation: spin 1s linear infinite;
+}
+
+.result__loading_circle-inner {
+  width: 72px;
+  height: 72px;
+  align-self: center;
+  background: #f5f6f7;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,5 @@
+.commits__comment_author_email {
+  grid-area: email;
+  font-size: 14px;
+  line-height: 22px;
+}

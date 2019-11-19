@@ -1,0 +1,26 @@
+@import url(./_date/commits__comment_date.css);
+@import url(./_author/commits__comment_author.css);
+@import url(./_text/commits__comment_text.css);
+
+.commits__comment {
+  width: calc(100% - 48px);
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+@media screen and (max-width: 400px) {
+  .commits__comment {
+    width: calc(100% - 32px);
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .commits__comment {
+    padding: 16px;
+  }
+}

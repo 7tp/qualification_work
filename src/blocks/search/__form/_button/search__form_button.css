@@ -1,0 +1,32 @@
+.search__form_button {
+  position: absolute;
+  left: 440px;
+  width: 168px;
+  color: #fff;
+  background-color: #2f71e5;
+}
+
+.search__form_button:hover {
+  background-color: #347eff;;
+}
+
+.search__form_button:active {
+  background-color: #2a65cc;
+}
+
+@media screen and (max-width: 460px) {
+  .search__form_button {
+    position: static;
+    margin-top: 16px;
+    width: 288px;
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 461px) and (max-width: 768px) {
+  .search__form_button {
+    left: 292px;
+    width: 160px;
+    height: 56px;
+  }
+}

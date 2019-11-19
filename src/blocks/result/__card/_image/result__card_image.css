@@ -1,0 +1,9 @@
+.result__card_image {
+  max-width: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.result__card_image img {
+  width: 100%;
+}

@@ -1,0 +1,25 @@
+.about-project__text {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-gap: 24px;
+
+  max-width: 815px;
+
+  margin-top: 24px;
+  margin-bottom: 94px;
+}
+
+@media screen and (max-width: 400px) {
+  .about-project__text {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .about-projext_text {
+    margin: 0;
+    font-size: 30px;
+    line-height: 34px;
+  }
+}

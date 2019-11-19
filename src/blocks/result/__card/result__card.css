@@ -1,0 +1,12 @@
+@import url(./_image/result__card_image.css);
+@import url(./_title/result__card_title.css);
+@import url(./_text/result__card_text.css);
+@import url(./_source/result__card_source.css);
+@import url(./_info/result__card_info.css);
+
+.result__card {
+  max-height: 576px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}

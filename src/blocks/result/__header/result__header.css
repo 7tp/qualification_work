@@ -1,0 +1,14 @@
+@import url(./_title/result__header_title.css);
+@import url(./_analyst-link/result__header_analyst-link.css);
+
+.result__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 615px) {
+  .result__header {
+    flex-direction: column;
+  }
+}

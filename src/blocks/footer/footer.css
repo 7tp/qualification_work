@@ -1,0 +1,26 @@
+@import url(./__navigation/footer__navigation.css);
+@import url(./__icons/footer__icons.css);
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding-right: 104px;
+  padding-left: 104px;
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    flex-wrap: wrap;
+    padding: 20px 16px 0 16px;
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 880px) {
+  .footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+

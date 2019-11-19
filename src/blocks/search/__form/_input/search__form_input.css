@@ -1,0 +1,33 @@
+.search__form_input {
+  position: relative;
+  margin: auto;
+  width: 608px;
+  height: 64px;
+  padding-left: 24px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  border: 2px;
+}
+
+.search__form_input:focus {
+  outline: none;
+  border: none;
+}
+
+.search__form_input:hover {
+  cursor: text;
+}
+
+@media screen and (max-width: 460px) {
+  .search__form_input {
+    width: 288px;
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 461px) and (max-width: 768px) {
+  .search__form_input {
+    width: 452px;
+    height: 56px;
+  }
+}

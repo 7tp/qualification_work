@@ -1,0 +1,19 @@
+.result__not-found_text {
+  width: 340px;
+  margin: 16px auto 80px auto;
+  color: #b6bcbf;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .result__not-found_text {
+    width: 288px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .result__not-found_text {
+    margin-bottom: 40px;
+  }
+}

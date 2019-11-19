@@ -1,0 +1,8 @@
+@import url(./_img/result__not-found_img.css);
+@import url(./_title/result__not-found_title.css);
+@import url(./_text/result__not-found_text.css);
+
+.result__not-found {
+  display: flex;
+  flex-direction: column;
+}

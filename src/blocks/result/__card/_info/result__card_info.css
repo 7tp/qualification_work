@@ -1,0 +1,21 @@
+@import url(./_text/result__card_info_text.css);
+
+.result__card_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100% - 316px);
+  padding: 20px 24px 24px 24px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 400px) {
+  .result__card_info {
+    padding: 15px 16px 20px 16px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 832px) {
+  .result__card_info {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,26 @@
+@import url(./__content/header__content.css);
+@import url(./__menu/header__menu.css);
+@import url(./__title/header__title.css);
+
+.header {
+  position: relative;
+  height: 80px;
+  padding-right: 104px;
+  padding-left: 101px;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    height: 56px;
+    padding-right: 16px;
+    padding-left: 14px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .header {
+    height: 64px;
+    padding-right: 40px;
+    padding-left: 42px;
+  }
+}

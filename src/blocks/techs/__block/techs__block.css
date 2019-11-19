@@ -1,0 +1,31 @@
+@import url(./_item/techs__block_item.css);
+@import url(./_text/techs__block_text.css);
+
+.techs__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+
+  margin-top: 12px;
+  margin-bottom: 88px;
+}
+
+@media screen and (max-width: 554px) {
+  .techs__block {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 555px) and (max-width: 768px) {
+  .techs__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 0;
+  }
+}

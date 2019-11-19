@@ -1,0 +1,24 @@
+.author__description_title {
+  margin-top: 51px;
+}
+
+@media screen and (max-width: 460px) {
+  .author__description_title {
+    margin-top: 24px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 461px) and (max-width: 768px) {
+  .author__description_title {
+    margin-top: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1060px) {
+  .author__description_title {
+    margin-top: 0;
+  }
+}

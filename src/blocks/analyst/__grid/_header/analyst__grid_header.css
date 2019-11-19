@@ -1,0 +1,13 @@
+@import url(./_month/analyst__grid_header_month.css);
+
+.analyst__grid_header {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 10px;
+  color: #b6bcbf;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #1a1b22;
+}

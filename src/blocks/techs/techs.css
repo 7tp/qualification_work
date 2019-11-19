@@ -1,0 +1,25 @@
+@import url(./__title/techs__title.css);
+@import url(./__block/techs__block.css);
+
+.techs {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  background-color: #f5f6f7;
+  padding: 80px 104px 0 104px;
+}
+
+@media screen and (max-width: 400px) {
+  .techs {
+    flex-direction: column;
+    padding: 32px 16px 38px 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .techs {
+    flex-direction: column;
+    padding: 40px;
+  }
+}
+

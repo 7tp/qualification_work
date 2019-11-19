@@ -1,0 +1,22 @@
+@import url(./__title/about-project__title.css);
+@import url(./__text/about-project__text.css);
+@import url(./__navigation/about-project__navigatiom.css);
+@import url(./__statistic/about-project__statistic.css);
+@import url(./__insert/about-project__insert.css);
+
+.about-project {
+  color: #1a1b22;
+  padding-left: 104px;
+}
+
+@media screen and (max-width: 400px) {
+  .about-project {
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .about-project {
+    padding: 30px 40px 26px 40px;
+  }
+}

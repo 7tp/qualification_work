@@ -1,0 +1,7 @@
+.about-project__statistic {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 4px;
+  margin-top: 24px;
+  margin-bottom: 80px;
+}

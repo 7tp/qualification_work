@@ -1,0 +1,11 @@
+.result__header_analyst-link {
+  align-self: center;
+  color: #1a1b22;
+}
+
+@media screen and (max-width: 615px) {
+  .result__header_analyst-link {
+    margin-top: 16px;
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,24 @@
+@import url(./__header/commits__header.css);
+@import url(./__blocks/commits__blocks.css);
+@import url(./__comment/commits__comment.css);
+@import url(./__dots/commits__dots.css);
+@import url(./__button-more/commits__button-more.css);
+
+.commits {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f6f7;
+  padding: 72px 104px 0 104px;
+}
+
+@media screen and (max-width: 400px) {
+  .commits {
+    padding: 32px 16px 32px 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 880px) {
+  .commits {
+    padding: 40px;
+  }
+}

@@ -1,0 +1,21 @@
+@import url(./__title/search__title.css);
+@import url(./__text/search__heading_text.css);
+
+.search__heading {
+  max-width: 608px;
+  margin: 80px auto auto;
+}
+
+@media screen and (max-width: 400px) {
+  .search__heading {
+    max-width: 285px;
+    margin: 30px auto auto;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .search__heading {
+    max-width: 452px;
+    margin: 40px auto auto;
+  }
+}

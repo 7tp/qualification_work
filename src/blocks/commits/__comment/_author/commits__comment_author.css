@@ -1,0 +1,14 @@
+@import url(./_photo/commits__comment_author_photo.css);
+@import url(./_name/commits__comment_author_name.css);
+@import url(./_email/commits__comment_author_email.css);
+
+.commits__comment_author {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "ph name"
+    "ph email";
+  grid-row-gap: 2px;
+  grid-column-gap: 16px;
+  margin-top: 16px;
+}

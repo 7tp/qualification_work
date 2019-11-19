@@ -1,0 +1,25 @@
+@import url(./_copyright/footer__navigation_copyright.css);
+
+.footer__navigation {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 48px;
+  color: #1a1b22;
+}
+
+.footer__navigation a {
+  color: #1a1b22;
+}
+
+@media screen and (max-width: 400px) {
+  .footer__navigation {
+    grid-template-columns: auto;
+    grid-gap: 30px;
+    width: 184px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .footer__navigation {
+    grid-gap: 25px;
+  }
+}

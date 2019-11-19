@@ -8,6 +8,11 @@ vomdule.exports = merge(common, {
       {
         test: /\.css$/,
         use: [
+          {
+            options: {
+              publicPath: '../'
+            }
+          },
           'style-loader'
         ]
       },

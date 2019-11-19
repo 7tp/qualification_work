@@ -1,0 +1,16 @@
+.result__loading_text {
+  margin: 24px auto 80px auto;
+  color: #b6bcbf;
+}
+
+@media screen and (max-width: 400px) {
+  .result__loading_text {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .result__loading_text {
+    margin-bottom: 40px;
+  }
+}
