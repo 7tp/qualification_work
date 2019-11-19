@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="icon" sizes="any" type="image/svg+xml" href="img/Favicon.svg">
-    <link rel="icon" type="image/png" href="img/Favicon2.png">
+    <link rel="icon" sizes="any" type="<%=require('image/svg+xml')%>" href="img/Favicon.svg">
+    <link rel="icon" type="image/png" href="<%=require('img/Favicon2.png')%>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -89,8 +89,8 @@
         <a href="https://praktikum.yandex.ru" class="link footer__navigation_link">Яндекс.Практикум</a>
       </nav>
       <div class="footer__icons">
-        <img class="footer__icons_logo" src="./img/Github-icon.svg" alt="logo-gh">
-        <img class="footer__icons_logo" src="./img/Fb-icon.svg" alt="logo-fb">
+        <img class="footer__icons_logo" src="<%=require('./img/Github-icon.svg')%>" alt="logo-gh">
+        <img class="footer__icons_logo" src="<%=require('./img/Fb-icon.svg')%>" alt="logo-fb">
       </div>
     </footer>
 
