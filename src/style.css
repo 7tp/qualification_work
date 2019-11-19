@@ -20,25 +20,3 @@
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/preloader.css);
 @import url(./blocks/about-project/about-project.css);
-
-@media screen and (max-width: 375px) {
-  body {
-      max-width: 375px;
-  }
-}
-@media screen and (min-width: 376px) and (max-width: 768px) {
-  body {
-      max-width: 768px;
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  body {
-      max-width: 1024px;
-  }
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-  body {
-      max-width: 1440px;
-  }
-}

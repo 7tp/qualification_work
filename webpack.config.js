@@ -1,13 +1,18 @@
 const webpack = require('webpack');
 const path = require('path');
+const isDev = process.env.NODE_ENV === 'development';
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 
+process.traceDeprecation = true;
+
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: './src/index.js',
+    analyst: './src/analyst.js',
+    about: './src/about.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -16,14 +21,19 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        use: { loader: "babel-loader" },
+        exclude: '/node_modules/'
+      },
+      {
         test: /\.css$/,
         use: [
-          {
+          (isDev ? 'style-loader' : {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../'
+            publicPath: '../'
             }
-          },
+          }),
           'css-loader',
           'postcss-loader'
         ]
@@ -34,18 +44,20 @@ module.exports = {
           'file-loader?name=./images/[name].[ext]',
           {
             loader: 'image-webpack-loader',
-            filename: '[contenthash].[ext]'
+            options: {
+              name(file) {
+                if (process.env.NODE_ENV === 'development') {
+                  return '[path][name].[ext]';
+                }
+                return '[contenthash].[ext]';
+              }
+            }
           },
         ],
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
         loader: 'file-loader?name=./vendor/[name].[ext]'
-        },
-      {
-      test: /\.js$/,
-      use: { loader: "babel-loader" },
-      exclude: '/node_modules/'
       }
     ]
   },
@@ -66,6 +78,18 @@ module.exports = {
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/about-project.html',
+      filename: 'about-project.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/analyst.html',
+      filename: 'analyst.html'
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
