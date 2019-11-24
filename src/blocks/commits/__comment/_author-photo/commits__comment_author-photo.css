@@ -1,0 +1,14 @@
+.commits__comment_author-photo {
+  grid-area: ph;
+  max-width: 64px;
+}
+
+.commits__comment_author-photo img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .commits__comment_author-photo {
+    max-width: 48px;
+  }
+}

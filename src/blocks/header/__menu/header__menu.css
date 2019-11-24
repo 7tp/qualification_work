@@ -7,18 +7,17 @@
   margin-top: 30px;
   font-size: 18px;
   line-height: 24px;
-}
-
-.main a {
-  color: #fff !important;
+  letter-spacing: -1.4;
 }
 
 @media screen and (max-width: 400px) {
   .header__menu {
     grid-gap: 11px;
     margin-top: 16px;
-    font-size: 16px;
-    line-height: 24px;
+  }
+  .header__menu .link {
+    font-size: 16px !important;
+    line-height: 24px !important;
   }
 }
 

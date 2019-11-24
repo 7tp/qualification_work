@@ -41,32 +41,44 @@
       <div class="techs__block">
         <div class="techs__block_item">
           <div class="techs__block_text text">HTML</div>
-          <img class="techs__block_image" src="<%=require('./img/html.svg')%>" alt="HTML">
+          <div class="techs__block_image">
+            <img src="<%=require('./img/html.svg')%>" alt="HTML">
+          </div>
         </div>
         <div class="techs__block_item">
           <div class="techs__block_text text">CSS</div>
-          <img class="techs__block_image" src="<%=require('./img/css.svg')%>" alt="CSS">
+          <div class="techs__block_image">
+            <img src="<%=require('./img/css.svg')%>" alt="CSS">
+          </div>
         </div>
         <div class="techs__block_item">
           <div class="techs__block_text text">Java Script</div>
-          <img class="techs__block_image" src="<%=require('./img/js.svg')%>" alt="Java Script">
+          <div class="techs__block_image">
+            <img src="<%=require('./img/js.svg')%>" alt="Java Script">
+          </div>
         </div>
         <div class="techs__block_item">
           <div class="techs__block_text text">Webpack</div>
-          <img class="techs__block_image" src="<%=require('./img/webpack.svg')%>" alt="Webpack">
+          <div class="techs__block_image">
+            <img src="<%=require('./img/webpack.svg')%>" alt="Webpack">
+          </div>
         </div>
       </div>
     </section>
 
     <section class="author">
       <div class="author__photo">
-        <img class="author__photo_img" src="<%=require('./img/avatar.jpg')%>" alt="photo">
+          <picture>
+            <source media="(min-width:881px)" srcset="<%=require('./img/avatar.jpg')%>">
+            <img class="author__photo_img" src="<%=require('./img/avatar-small.jpg')%>" alt="photo">
+          </picture>
       </div>
       <div class="author__description">
         <h2 class="author__description_title title">Об авторе</h2>
         <div class="author__description_text">
             <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
             <p class="text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+            <p class="text">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
         </div>
       </div>
     </section>
@@ -74,7 +86,7 @@
     <section class="commits">
       <div class="commits__header">
         <h3 class="commits__header_title title">История коммитов из GitHub</h3>
-        <a class="link commits__header_link">Открыть в Github
+        <a class="link commits__header_link" href="https://github.com/7tp/qualification_work" target="_blank">Открыть в Github
           <img class="arrow" src="<%=require('./img/arrow.svg')%>" alt="arrow">
         </a>
       </div>
@@ -82,27 +94,33 @@
         <div class="commits__comment">
           <div class="commits__comment_date date">14 августа, 2019</div>
           <div class="commits__comment_author">
-            <img class="commits__comment_author_photo" src="<%=require('./img/avatar_dolinin.jpg')%>" alt="photo">
-            <div class="commits__comment_author_name subtitle">Антон Долинин</div>
-            <div class="commits__comment_author_email">anton@yandex.ru</div>
+            <div class="commits__comment_author-photo">
+              <img src="<%=require('./img/avatar_dolinin.jpg')%>" alt="gh-avatar">
+            </div>
+            <div class="commits__comment_author-name subtitle">Антон Долинин</div>
+            <div class="commits__comment_author-email">anton@yandex.ru</div>
           </div>
           <div class="commits__comment_text text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</div>
         </div>
         <div class="commits__comment">
           <div class="commits__comment_date date">14 августа, 2019</div>
           <div class="commits__comment_author">
-            <img class="commits__comment_author_photo" src="<%=require('./img/avatar_dolinin.jpg')%>" alt="photo">
-            <div class="commits__comment_author_name subtitle">Мария Фёдорова</div>
-            <div class="commits__comment_author_email">mariiifed@yandex.ru</div>
+            <div class="commits__comment_author-photo">
+              <img src="<%=require('./img/avatar_dolinin.jpg')%>" alt="gh-avatar">
+            </div>
+            <div class="commits__comment_author-name subtitle">Мария Фёдорова</div>
+            <div class="commits__comment_author-email">mariiifed@yandex.ru</div>
           </div>
           <div class="commits__comment_text text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open Tools > Plugins > Available plugins and find and install Emmet plugin.</div>
         </div>
         <div class="commits__comment">
           <div class="commits__comment_date date">14 августа, 2019</div>
           <div class="commits__comment_author">
-            <img class="commits__comment_author_photo" src="<%=require('./img/avatar_dolinin.jpg')%>" alt="photo">
-            <div class="commits__comment_author_name subtitle">Инга Иванова</div>
-            <div class="commits__comment_author_email">ingaiva@yandex.ru</div>
+            <div class="commits__comment_author-photo">
+              <img src="<%=require('./img/avatar_dolinin.jpg')%>" alt="gh-avatar">
+            </div>
+            <div class="commits__comment_author-name subtitle">Инга Иванова</div>
+            <div class="commits__comment_author-email">ingaiva@yandex.ru</div>
           </div>
           <div class="commits__comment_text text">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</div>
         </div>
@@ -116,21 +134,25 @@
       </section>
 
     <footer class="footer">
-      <span class="footer__navigation_copyright">&copy; 2019. Supersite</span>
+      <span class="footer__copyright">&copy; 2019. Supersite</span>
       <nav class="footer__navigation">
         <a href="./index.html" class="link footer__navigation_link">Главная</a>
         <a href="./about-project.html" class="link footer__navigation_link">О проекте</a>
-        <a href="https://praktikum.yandex.ru" class="link footer__navigation_link">Яндекс.Практикум</a>
+        <a href="https://praktikum.yandex.ru" class="link footer__navigation_link" target="_blank">Яндекс.Практикум</a>
       </nav>
       <div class="footer__icons">
-          <img class="footer__icons_logo" src="<%=require('./img/Github-icon.svg')%>" alt="logo-gh">
-          <img class="footer__icons_logo" src="<%=require('./img/Fb-icon.svg')%>" alt="logo-fb">
-        </div>
+        <a class="footer__icons_logo" href="https://github.com/7tp/qualification_work" target="_blank">
+          <img src="<%=require('./img/Github-icon.svg')%>" alt="logo-gh">
+        </a>
+        <a class="footer__icons_logo" href="https://www.facebook.com" target="_blank">
+          <img src="<%=require('./img/Fb-icon.svg')%>" alt="logo-fb">
+        </a>
+      </div>
     </footer>
 
   </div>
 
 <!--  <script src="index.js"></script> -->
-  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>
 </html>

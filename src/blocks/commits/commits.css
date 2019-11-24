@@ -9,6 +9,7 @@
   flex-direction: column;
   background-color: #f5f6f7;
   padding: 72px 104px 0 104px;
+  text-align: center;
 }
 
 @media screen and (max-width: 400px) {

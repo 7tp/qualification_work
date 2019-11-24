@@ -1,7 +1,8 @@
 .author__photo {
   max-width: 464px;
-  max-height: 464px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   background-size: contain;
   background-position: center;
@@ -14,13 +15,11 @@
 @media screen and (max-width: 460px) {
   .author__photo {
     width: 272px;
-    height: 272px;
     margin: auto;
   }
 }
 @media screen and (min-width: 461px) and (max-width: 768px) {
   .author__photo {
     width: 232px;
-    height: 232px;
   }
 }

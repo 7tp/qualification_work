@@ -1,4 +1,21 @@
 .commits__header_title {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 40px;
+  line-height: 46px;
+  text-align: left;
+}
+
+@media screen and (max-width: 400px) {
+  .commits__header_title {
+    max-width: 112px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 880px) {
+  .commits__header_title {
+    max-width: 336px;
+    font-size: 30px;
+    line-height: 34px;
+  }
 }

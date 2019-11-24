@@ -1,5 +1,6 @@
 @import url(./__navigation/footer__navigation.css);
 @import url(./__icons/footer__icons.css);
+@import url(./__copyright/footer__copyright.css);
 
 .footer {
   display: flex;
@@ -11,13 +12,21 @@
   padding-left: 104px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 400px) {
   .footer {
     flex-wrap: wrap;
     padding: 20px 16px 0 16px;
   }
 }
-@media screen and (min-width: 651px) and (max-width: 880px) {
+
+@media screen and (min-width: 401px) and (max-width: 687px) {
+  .footer {
+    flex-wrap: wrap;
+    padding: 22px 40px 0 40px;
+  }
+}
+
+@media screen and (min-width: 688px) and (max-width: 880px) {
   .footer {
     padding-left: 40px;
     padding-right: 40px;

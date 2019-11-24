@@ -1,26 +1,48 @@
 @import url(./_date/commits__comment_date.css);
 @import url(./_author/commits__comment_author.css);
+@import url(./_author-photo/commits__comment_author-photo.css);
+@import url(./_author-name/commits__comment_author-name.css);
+@import url(./_author-email/commits__comment_author-email.css);
 @import url(./_text/commits__comment_text.css);
 
 .commits__comment {
+  position: relative;
   width: calc(100% - 48px);
-  min-height: 240px;
+  height: 240px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px 24px 24px 24px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.commits__comment:after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 24px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
 }
 
 @media screen and (max-width: 400px) {
   .commits__comment {
     width: calc(100% - 32px);
     padding: 16px;
+    height: 232px;
+  }
+
+  .commits__comment:after {
+    height: 16px;
   }
 }
 
 @media screen and (min-width: 401px) and (max-width: 768px) {
   .commits__comment {
-    padding: 16px;
+    padding: 24px;
+    height: 194px;
   }
 }

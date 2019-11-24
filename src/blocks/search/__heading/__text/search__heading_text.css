@@ -1,10 +1,10 @@
 .search__heading_text {
-  margin: 32px auto auto;
+  margin: 32px auto 32px auto;
 }
 
 @media screen and (max-width: 400px) {
   .search__heading_text {
-    margin: 16px auto auto;
+    margin: 16px auto 16px auto;
     font-size: 20px;
     line-height: 26px;
   }
@@ -12,6 +12,6 @@
 
 @media screen and (min-width: 401px) and (max-width: 768px) {
   .search__heading_text {
-    margin: 16px auto auto;
+    margin: 16px auto 16px auto;
   }
 }

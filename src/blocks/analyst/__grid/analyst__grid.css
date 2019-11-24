@@ -9,13 +9,13 @@
     "blank2 scale2";
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 407px) {
   .analyst__grid {
     grid-template-columns: 80fr 288fr;
   }
 }
 
-@media screen and (min-width: 401px) and (max-width: 768px) {
+@media screen and (min-width: 408px) and (max-width: 771px) {
   .analyst__grid {
     grid-template-columns: 117fr 688fr;
   }

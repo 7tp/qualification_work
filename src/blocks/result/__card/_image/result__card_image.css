@@ -7,3 +7,9 @@
 .result__card_image img {
   width: 100%;
 }
+
+@media screen and (min-width: 480px) and (max-width: 534px) {
+  .result__card_image {
+    max-width: 454px;
+  }
+}

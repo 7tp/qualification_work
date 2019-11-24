@@ -6,7 +6,7 @@
   max-width: 815px;
 
   margin-top: 24px;
-  margin-bottom: 94px;
+  margin-bottom: 96px;
 }
 
 @media screen and (max-width: 400px) {
@@ -17,8 +17,9 @@
 }
 
 @media screen and (min-width: 401px) and (max-width: 768px) {
-  .about-projext_text {
-    margin: 0;
+  .about-project__text {
+    margin-top: 18px;
+    margin-bottom: 30px;
     font-size: 30px;
     line-height: 34px;
   }

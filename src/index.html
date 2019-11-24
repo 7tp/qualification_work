@@ -26,6 +26,11 @@
     </header>
 
     <section class="search">
+      <picture>
+        <source media="(max-width:320px)" srcset="<%=require('./img/georgia-320.jpg')%>">
+        <source media="(max-width:768px)" srcset="<%=require('./img/georgia-768.jpg')%>">
+        <img class="search__background" src="<%=require('./img/georgia-1440.jpg')%>" alt="background picture">
+      </picture>
       <div class="search__heading">
         <h1 class="search__heading_title">Что в мире творится?</h1>
         <p class="search__heading_text text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
@@ -61,7 +66,7 @@
       </div>
 
       <div class="result__grid">
-        <a class="result__grid_link-insert" href="#">
+        <a class="result__grid_link-insert" href="#" target="_blank">
           <div class="result__card">
             <div class="result__card_image">
               <img src="<%=require('./img/card/image_08.jpg')%>" alt="Картинка новости">
@@ -76,7 +81,7 @@
             </div>
           </div>
         </a>
-        <a class="result__grid_link-insert" href="#">
+        <a class="result__grid_link-insert" href="#" target="_blank">
           <div class="result__card">
             <div class="result__card_image">
               <img src="<%=require('./img/card/image_04.jpg')%>" alt="Картинка новости">
@@ -91,7 +96,7 @@
             </div>
           </div>
         </a>
-        <a class="result__grid_link-insert" href="#">
+        <a class="result__grid_link-insert" href="#" target="_blank">
           <div class="result__card">
             <div class="result__card_image">
               <img src="<%=require('./img/card/image_07.jpg')%>" alt="Картинка новости">
@@ -106,7 +111,7 @@
             </div>
           </div>
         </a>
-        <a class="result__grid_link-insert" href="#">
+        <a class="result__grid_link-insert" href="#" target="_blank">
           <div class="result__card">
             <div class="result__card_image">
               <img src="<%=require('./img/card/image_08.jpg')%>" alt="Картинка новости">
@@ -121,7 +126,7 @@
             </div>
           </div>
         </a>
-        <a class="result__grid_link-insert" href="#">
+        <a class="result__grid_link-insert" href="#" target="_blank">
           <div class="result__card">
             <div class="result__card_image">
               <img src="<%=require('./img/card/image_04.jpg')%>" alt="Картинка новости">
@@ -138,7 +143,7 @@
             </div>
           </div>
         </a>
-        <a class="result__grid_link-insert" href="#">
+        <a class="result__grid_link-insert" href="#" target="_blank">
           <div class="result__card">
             <div class="result__card_image">
               <img src="<%=require('./img/card/image_07.jpg')%>" alt="Картинка новости">
@@ -155,19 +160,21 @@
         </a>
 
         <template id="tmpl-search">
-          <div class="result__card">
-            <div class="result__card_image">
-              <img alt="Картинка новости">
-            </div>
-            <div class="result__card_info">
-              <div class="result__card_info-text">
-                <div type="" class="result__card_date date">2 августа, 2019</div>
-                <h3 class="result__card_title subtitle"></h3>
-                <p class="result__card_text text"></p>
+          <a class="result__grid_link-insert" href="#" target="_blank">
+            <div class="result__card">
+              <div class="result__card_image">
+                <img alt="Картинка новости">
               </div>
-              <div class="result__card_source"></div>
+              <div class="result__card_info">
+                <div class="result__card_info-text">
+                  <div type="" class="result__card_date date">2 августа, 2019</div>
+                  <h3 class="result__card_title subtitle"></h3>
+                  <p class="result__card_text text"></p>
+                </div>
+                <div class="result__card_source"></div>
+              </div>
             </div>
-          </div>
+          </a>
         </template>
       </div>
 
@@ -177,7 +184,10 @@
 
     <section class="author">
       <div class="author__photo">
-        <img class="author__photo_img" src="<%=require('./img/avatar.jpg')%>" alt="photo">
+        <picture>
+          <source media="(min-width:881px)" srcset="<%=require('./img/avatar.jpg')%>">
+          <img class="author__photo_img" src="<%=require('./img/avatar-small.jpg')%>" alt="photo">
+        </picture>
       </div>
       <div class="author__description">
         <h2 class="author__description_title title">Об авторе</h2>
@@ -189,15 +199,19 @@
     </section>
 
     <footer class="footer">
-      <span class="footer__navigation_copyright">&copy; 2019. Supersite</span>
+      <span class="footer__copyright">&copy; 2019. Supersite</span>
       <nav class="footer__navigation">
-        <a href="./index.html" class="link">Главная</a>
-        <a href="./about-project.html" class="link">О проекте</a>
-        <a href="https://praktikum.yandex.ru" class="link">Яндекс.Практикум</a>
+        <a href="./index.html" class="link footer__navigation_link">Главная</a>
+        <a href="./about-project.html" class="link footer__navigation_link">О проекте</a>
+        <a href="https://praktikum.yandex.ru" class="link footer__navigation_link" target="_blank">Яндекс.Практикум</a>
       </nav>
       <div class="footer__icons">
-        <img src="<%=require('./img/Github-icon.svg')%>" alt="logo-gh">
-        <img src="<%=require('./img/Fb-icon.svg')%>" alt="logo-fb">
+        <a class="footer__icons_logo" href="https://github.com/7tp/qualification_work" target="_blank">
+          <img src="<%=require('./img/Github-icon.svg')%>" alt="logo-gh">
+        </a>
+        <a class="footer__icons_logo" href="https://www.facebook.com" target="_blank">
+          <img src="<%=require('./img/Fb-icon.svg')%>" alt="logo-fb">
+        </a>
       </div>
     </footer>
 
