@@ -1,9 +1,25 @@
 @import url(./__loading/result__loading.css);
+@import url(./__circle-preloader/result__circle-preloader.css);
+@import url(./__loading-text/result__loading-text.css);
+
 @import url(./__header/result__header.css);
+@import url(./__header-title/result__header-title.css);
+@import url(./__header-analyst-link/result__header-analyst-link.css);
+
 @import url(./__grid/result__grid.css);
 @import url(./__card/result__card.css);
+@import url(./__card-image/result__card-image.css);
+@import url(./__card-info/result__card-info.css);
+@import url(./__card-info-text/result__card-info-text.css);
+@import url(./__card-title/result__card-title.css);
+@import url(./__card-text/result__card-text.css);
+@import url(./__card-source/result__card-source.css);
 @import url(./__button-more/result__button-more.css);
+
 @import url(./__not-found/result__not-found.css);
+@import url(./__not-found-img/result__not-found-img.css);
+@import url(./__not-found-title/result__not-found-title.css);
+@import url(./__not-found-text/result__not-found-text.css);
 
 .result {
   display: flex;

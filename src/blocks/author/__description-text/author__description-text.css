@@ -1,0 +1,19 @@
+.author__description-text {
+  display: grid;
+  grid-template-rows: auto auto;
+  max-width: 600px;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 460px) {
+  .author__description-text {
+    max-width: 424px;
+    margin-top: 12px;
+  }
+}
+@media screen and (min-width: 461px) and (max-width: 768px) {
+  .author__description-text {
+    max-width: 424px;
+    margin-top: 10px;
+  }
+}

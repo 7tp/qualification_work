@@ -1,6 +1,11 @@
 @import url(./__background/search__background.css);
 @import url(./__heading/search__heading.css);
+@import url(./__heading-title/search__heading-title.css);
+@import url(./__heading-text/search__heading-text.css);
 @import url(./__form/search__form.css);
+@import url(./__form-button/search__form-button.css);
+@import url(./__form-field/search__form-field.css);
+@import url(./__form-input/search__form-input.css);
 
 .search {
   position: relative;
@@ -8,9 +13,6 @@
   margin-top: -80px;
   padding-top: 80px;
   padding-bottom: 80px;
-  /*background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../../img/georgia-de-lotz--UsJoNxLaNo-unsplash2.jpg); */
-  /*background-size: cover;
-  background-position: center; */
   color: #fff;
   overflow: hidden;
 }

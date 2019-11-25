@@ -1,0 +1,13 @@
+@import url(./_white/header__link_white.css);
+@import url(./_black/header__link_black.css);
+
+.header__link {
+  text-decoration-line: none;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+}
+
+.header__link:hover {
+  cursor: pointer;
+}

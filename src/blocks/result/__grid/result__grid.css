@@ -1,5 +1,3 @@
-@import url(../__card/result__card.css);
-
 .result__grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

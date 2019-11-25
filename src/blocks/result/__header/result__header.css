@@ -1,6 +1,3 @@
-@import url(./_title/result__header_title.css);
-@import url(./_analyst-link/result__header_analyst-link.css);
-
 .result__header {
   display: flex;
   justify-content: space-between;

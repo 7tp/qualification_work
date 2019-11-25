@@ -4,11 +4,6 @@
   grid-gap: 48px;
 }
 
-.footer__navigation a {
-  color: #1a1b22;
-  letter-spacing: -0.4px;
-}
-
 @media screen and (max-width: 400px) {
   .footer__navigation {
     grid-template-columns: auto;

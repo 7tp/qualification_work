@@ -21,10 +21,3 @@
     margin-top: 32px;
   }
 }
-/*
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .commits__blocks {
-    grid-template-columns: 1fr 1fr;
-    margin-top: 32px;
-  }
-} */

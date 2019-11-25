@@ -1,5 +1,3 @@
-@import url(./_dot/commits__dots_dot.css);
-
 .commits__dots {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
