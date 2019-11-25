@@ -1,10 +1,3 @@
-@import url(./_date/commits__comment_date.css);
-@import url(./_author/commits__comment_author.css);
-@import url(./_author-photo/commits__comment_author-photo.css);
-@import url(./_author-name/commits__comment_author-name.css);
-@import url(./_author-email/commits__comment_author-email.css);
-@import url(./_text/commits__comment_text.css);
-
 .commits__comment {
   position: relative;
   width: calc(100% - 48px);

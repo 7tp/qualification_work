@@ -1,9 +1,0 @@
-.commits__header_link {
-  color: #1a1b22;
-}
-
-@media screen and (max-width: 700px) {
-  .commits__header_link {
-    display: none;
-  }
-}

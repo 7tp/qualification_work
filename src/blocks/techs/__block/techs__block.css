@@ -1,6 +1,3 @@
-@import url(./_item/techs__block_item.css);
-@import url(./_text/techs__block_text.css);
-
 .techs__block {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

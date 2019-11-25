@@ -1,0 +1,10 @@
+.search__form-field {
+  position: relative;
+}
+
+@media screen and (max-width: 460px) {
+  .search__form-field {
+    display: flex;
+    flex-direction: column;
+  }
+}

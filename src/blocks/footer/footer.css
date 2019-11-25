@@ -1,5 +1,7 @@
 @import url(./__navigation/footer__navigation.css);
+@import url(./__navigation-link/footer__navigation-link.css);
 @import url(./__icons/footer__icons.css);
+@import url(./__icons-logo/footer__icons-logo.css);
 @import url(./__copyright/footer__copyright.css);
 
 .footer {

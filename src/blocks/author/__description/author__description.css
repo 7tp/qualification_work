@@ -1,6 +1,3 @@
-@import url(./_title/author__description_title.css);
-@import url(./_text/author__description_text.css);
-
 .author__description {
   display: flex;
   flex-direction: column;

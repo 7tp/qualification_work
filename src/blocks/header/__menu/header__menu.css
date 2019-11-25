@@ -1,5 +1,3 @@
-@import url(./_underline/header__menu_underline.css);
-
 .header__menu {
   display: grid;
   grid-template-columns: auto auto;

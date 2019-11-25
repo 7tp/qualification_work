@@ -1,13 +1,18 @@
-@import url(./__content/header__content.css);
 @import url(./__menu/header__menu.css);
 @import url(./__title/header__title.css);
+@import url(./__link/header__link.css);
+@import url(./__black/header__black.css);
+@import url(./__white/header__white.css);
 
 .header {
   position: relative;
   height: 80px;
   padding-right: 104px;
   padding-left: 101px;
-  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+
   z-index: 2;
 }
 

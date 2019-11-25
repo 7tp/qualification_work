@@ -1,6 +1,3 @@
-@import url(./_pic/analyst__grid-graph_pic.css);
-@import url(./_volume/analyst__grid-graph_volume.css);
-
 .analyst__grid-graph {
   grid-area: graph;
   height: 24px;
