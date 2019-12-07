@@ -20,18 +20,22 @@
   display: flex;
   flex-direction: column;
   background-color: #f5f6f7;
-  padding: 72px 104px 0 104px;
+  padding: 72px 0 102px 0;
   text-align: center;
+}
+
+.commits a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 400px) {
   .commits {
-    padding: 32px 16px 32px 16px;
+    padding: 32px 0 32px 0;
   }
 }
 
 @media screen and (min-width: 401px) and (max-width: 880px) {
   .commits {
-    padding: 40px;
+    padding: 40px 0 60px 0;
   }
 }

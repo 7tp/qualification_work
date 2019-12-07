@@ -10,12 +10,13 @@
     <meta name="keywords" content="Webpack, HTML5, CSS, Java Script">
     <meta name="author" content="Руслан Винокуров">
     <title>NewsAnalyzer</title>
-<!---    <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="./css/about.f0471862e9f1ce3a7ec3.css?73d314b322e4142dfc90">
+    <link rel="stylesheet" href="./css/about.bd2863b5786bca4c4652.css?30d7f39cee4ba8f49b2a">
+    <link rel="stylesheet" href="../node_modules/flickity/dist/flickity.min.css" media="screen">
+<!---    <link rel="stylesheet" href="./pages/about.css"> -->
 </head>
 <body>
   <div class="root">
-    <header class="header header__black">
+    <header class="header header_black">
       <a href="./index.html" class="header__title">NewsAnalyzer</a>
       <nav class="header__menu">
         <a href="./index.html" class="header__link header__link_black">Главная</a>
@@ -88,47 +89,27 @@
           <img class="arrow" src="./images/arrow.svg" alt="arrow">
         </a>
       </div>
-      <div class="commits__blocks">
-        <div class="commits__comment">
-          <div class="commits__comment-date date">14 августа, 2019</div>
-          <div class="commits__comment-author">
-            <div class="commits__comment-author-photo">
-              <img src="./images/avatar_dolinin.jpg" alt="gh-avatar">
-            </div>
-            <div class="commits__comment-author-name subtitle">Антон Долинин</div>
-            <div class="commits__comment-author-email">anton@yandex.ru</div>
-          </div>
-          <div class="commits__comment-text text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</div>
-        </div>
-        <div class="commits__comment">
-          <div class="commits__comment-date date">14 августа, 2019</div>
-          <div class="commits__comment-author">
-            <div class="commits__comment-author-photo">
-              <img src="./images/avatar_dolinin.jpg" alt="gh-avatar">
-            </div>
-            <div class="commits__comment-author-name subtitle">Мария Фёдорова</div>
-            <div class="commits__comment-author-email">mariiifed@yandex.ru</div>
-          </div>
-          <div class="commits__comment-text text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open Tools > Plugins > Available plugins and find and install Emmet plugin.</div>
-        </div>
-        <div class="commits__comment">
-          <div class="commits__comment-date date">14 августа, 2019</div>
-          <div class="commits__comment-author">
-            <div class="commits__comment-author-photo">
-              <img src="./images/avatar_dolinin.jpg" alt="gh-avatar">
-            </div>
-            <div class="commits__comment-author-name subtitle">Инга Иванова</div>
-            <div class="commits__comment-author-email">ingaiva@yandex.ru</div>
-          </div>
-          <div class="commits__comment-text text">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</div>
-        </div>
+
+      <div class="main-carousel">
+
       </div>
-      <div class="commits__dots">
-        <a href="#" class="commits__dots-dot"></a>
-        <a href="#" class="commits__dots-dot"></a>
-        <a href="#" class="commits__dots-dot"></a>
-      </div>
-      <button class="button commits__button-more">Открыть в GitHub</button>
+
+      <a href="https://github.com/7tp/qualification_work" target="_blank"><button class="button commits__button-more">Открыть в GitHub</button></a>
+
+     <template id="tmplCarousel">
+        <div class="carousel-cell">
+          <div class="commits__comment">
+            <div class="commits__comment-date date"></div>
+            <div class="commits__comment-author">
+              <div class="commits__comment-author-photo"></div>
+              <div class="commits__comment-author-name subtitle"></div>
+              <div class="commits__comment-author-email"></div>
+            </div>
+            <div class="commits__comment-text text"></div>
+          </div>
+        </div>
+      </template>
+
       </section>
 
     <footer class="footer">
@@ -150,7 +131,8 @@
 
   </div>
 
-<!--  <script src="index.js"></script> -->
-  <script src="./js/about.452ad974ee2d31bc3d17.js?73d314b322e4142dfc90"></script>
+  <script src="./js/about.09ed7a9229c25249b337.js?30d7f39cee4ba8f49b2a"></script>
+<!--  <script src="about.js"></script> -->
+  <script src="../node_modules/flickity/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>

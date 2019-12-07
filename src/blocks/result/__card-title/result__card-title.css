@@ -1,7 +1,10 @@
 .result__card-title {
   margin-top: 12px;
+  max-height: calc(1.15em * 4);
   overflow: hidden;
-  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 @media screen and (max-width: 400px) {

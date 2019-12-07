@@ -1,4 +1,6 @@
 .analyst__grid-pic {
   height: 24px;
   background: #2f71e5;
+  padding: 0 6px 0 6px;
+  width: 10%;
 }

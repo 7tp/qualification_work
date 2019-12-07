@@ -1,0 +1,16 @@
+.result__is-found {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 400px) {
+  .result__is-found {
+    padding-bottom: 44px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .result__is-found {
+    padding-bottom: 40px;
+  }
+}

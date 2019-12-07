@@ -1,14 +1,15 @@
 .commits__comment-author-photo {
   grid-area: ph;
-  max-width: 64px;
-}
-
-.commits__comment-author-photo img {
-  width: 100%;
+  width: 64px;
+  height: 64px;
+  background-size: contain;
+  background-position: center;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 768px) {
   .commits__comment-author-photo {
-    max-width: 48px;
+    width: 48px;
+    height: 48px;
   }
 }

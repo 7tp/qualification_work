@@ -1,7 +1,7 @@
 @import url(./_white/header__link_white.css);
 @import url(./_black/header__link_black.css);
-@import url(./_active-white/header__link_active-white.css);
-@import url(./_active-black/header__link_active-black.css);
+@import url(./_active_white/header__link_active_white.css);
+@import url(./_active_black/header__link_active_black.css);
 
 .header__link {
   text-decoration-line: none;

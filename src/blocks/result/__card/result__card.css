@@ -1,4 +1,7 @@
 .result__card {
+  display: flex;
+  flex-direction: column;
+
   max-height: 576px;
   background-color: #fff;
   border-radius: 16px;
