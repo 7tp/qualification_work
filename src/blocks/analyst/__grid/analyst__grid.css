@@ -1,0 +1,22 @@
+.analyst__grid {
+  display: grid;
+  grid-template-columns: 104fr 1128fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "header header"
+    "blank1 scale1"
+    "date graph"
+    "blank2 scale2";
+}
+
+@media screen and (max-width: 407px) {
+  .analyst__grid {
+    grid-template-columns: 80fr 288fr;
+  }
+}
+
+@media screen and (min-width: 408px) and (max-width: 771px) {
+  .analyst__grid {
+    grid-template-columns: 117fr 688fr;
+  }
+}

@@ -1,0 +1,6 @@
+.result__card {
+  max-height: 576px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}

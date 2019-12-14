@@ -1,0 +1,16 @@
+.author__description {
+  display: flex;
+  flex-direction: column;
+  margin-left: 56px;
+}
+
+@media screen and (max-width: 400px) {
+  .author__description {
+    margin: 24px 0 0 0;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .author__description {
+    margin-left: 32px;
+  }
+}

@@ -1,0 +1,7 @@
+.header__link_white {
+  border-bottom: 3px solid #fff;
+}
+
+.header__link_white:hover {
+  color: #fff;
+}

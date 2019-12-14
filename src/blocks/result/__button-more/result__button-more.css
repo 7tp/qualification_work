@@ -1,0 +1,19 @@
+.result__button-more {
+  background-color: #fff;
+  margin: 64px auto 80px auto;
+}
+
+.result__button-more:hover {
+  background-color: rgba(255, 255, 255, 0.9);;
+}
+
+@media screen and (max-width: 400px) {
+  .result__button-more {
+    margin: 13px auto 44px auto;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .result__button-more {
+    margin: 32px auto 40px auto;
+  }
+}

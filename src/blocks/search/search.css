@@ -1,0 +1,42 @@
+@import url(./__background/search__background.css);
+@import url(./__heading/search__heading.css);
+@import url(./__heading-title/search__heading-title.css);
+@import url(./__heading-text/search__heading-text.css);
+@import url(./__form/search__form.css);
+@import url(./__form-button/search__form-button.css);
+@import url(./__form-field/search__form-field.css);
+@import url(./__form-input/search__form-input.css);
+
+.search {
+  position: relative;
+  height: 416px;
+  margin-top: -80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #fff;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 400px) {
+  .search {
+    height: 480px;
+    margin-top: -56px;
+    padding: 56px 16px 0 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 460px) {
+  .search {
+    height: 380px;
+    margin-top: -64px;
+    padding-top: 64px;
+  }
+}
+
+@media screen and (min-width: 461px) and (max-width: 768px) {
+  .search {
+    height: 256px;
+    margin-top: -64px;
+    padding-top: 64px;
+  }
+}

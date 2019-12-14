@@ -1,0 +1,16 @@
+.search__background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1441px) {
+  .search__background {
+    width: 100%;
+  }
+}

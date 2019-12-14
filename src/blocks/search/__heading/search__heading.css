@@ -1,0 +1,24 @@
+.search__heading {
+  max-width: 608px;
+  margin: 80px auto 0 auto;
+}
+
+@media screen and (max-width: 400px) {
+  .search__heading {
+    max-width: 285px;
+    margin: 30px auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .search__heading {
+    max-width: 452px;
+    margin: 40px auto 0 auto;
+  }
+  @media screen and (min-width: 401px) and (max-width: 535px) {
+    .search__heading {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+}

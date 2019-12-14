@@ -1,0 +1,37 @@
+@import url(./__header/commits__header.css);
+@import url(./__header-title/commits__header-title.css);
+@import url(./__header-link/commits__header-link.css);
+
+@import url(./__blocks/commits__blocks.css);
+@import url(./__comment/commits__comment.css);
+@import url(./__comment-date/commits__comment-date.css);
+@import url(./__comment-author/commits__comment-author.css);
+@import url(./__comment-author-photo/commits__comment-author-photo.css);
+@import url(./__comment-author-name/commits__comment-author-name.css);
+@import url(./__comment-author-email/commits__comment-author-email.css);
+@import url(./__comment-text/commits__comment-text.css);
+
+@import url(./__dots/commits__dots.css);
+@import url(./__dots-dot/commits__dots-dot.css);
+
+@import url(./__button-more/commits__button-more.css);
+
+.commits {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f6f7;
+  padding: 72px 104px 0 104px;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .commits {
+    padding: 32px 16px 32px 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 880px) {
+  .commits {
+    padding: 40px;
+  }
+}

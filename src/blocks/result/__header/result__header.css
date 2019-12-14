@@ -1,0 +1,11 @@
+.result__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 615px) {
+  .result__header {
+    flex-direction: column;
+  }
+}

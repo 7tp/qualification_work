@@ -1,0 +1,28 @@
+@import url(./__grid/analyst__grid.css);
+@import url(./__grid-header/analyst__grid-header.css);
+@import url(./__grid-month/analyst__grid-month.css);
+@import url(./__grid-scale/analyst__grid-scale.css);
+@import url(./__grid-scale1/analyst__grid-scale1.css);
+@import url(./__grid-scale2/analyst__grid-scale2.css);
+@import url(./__grid-date/analyst__grid-date.css);
+@import url(./__grid-graph/analyst__grid-graph.css);
+@import url(./__grid-pic/analyst__grid-pic.css);
+@import url(./__grid-volume/analyst__grid-volume.css);
+@import url(./__subtitle/analyst__subtitle.css);
+
+.analyst {
+  background-color: #f5f6f7;
+  padding: 80px 104px 72px 104px;
+}
+
+@media screen and (max-width: 400px) {
+  .analyst {
+    padding: 24px 16px 38px 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .analyst {
+    padding: 40px;
+  }
+}
