@@ -1,0 +1,13 @@
+@import url(./_left/commits__gradient_left.css);
+@import url(./_right/commits__gradient_right.css);
+
+@media screen and (min-width: 1280px) {
+  .commits__gradient {
+    position: absolute;
+    top: 0;
+    width: 88px;
+    height: 100%;
+    opacity: .7;
+    z-index: 4;
+  }
+}

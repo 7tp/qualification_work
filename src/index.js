@@ -1,26 +1,41 @@
 'use strict'
 import "./pages/index.css";
+import {newsUrl, apiKey} from './js/variables';
+import {date} from './js/time-interval';
+import getCards from './js/get-cards';
+import Validate from './js/validation';
+import * as activate from './js/activate-blocks-button';
+import {getArrElements, showMore} from './js/cut-array';
+import NewsApi from './js/news-api';
+import NewsList from "./js/news-list";
 
-const headerUnderlineWhite = document.querySelectorAll('.header__link_white');
-headerUnderlineWhite[1].style.cssText ='border-bottom: none';
-
-const questionForm = document.forms.news;
-const question = questionForm.elements.news_question;
+const questionForm = document.querySelector('form[name=news]');
+const question = document.querySelector('input[name=news_question]');
 const newsButton = document.querySelector('.search__form-button');
 const newsContainer = document.querySelector('.result__grid');
 const showMoreButton = document.querySelector('.result__button-more');
+const resultSection = document.querySelector('.result');
+const newsLoading = document.querySelector('.result__loading');
+const resultNone = document.querySelector('.result__not-found');
+const newsGrid = document.querySelector('.result__is-found');
+const headerUnderlineWhite = document.querySelectorAll('.header__link_white');
 
-question.value = sessionStorage.getItem('question');
-if (!!sessionStorage.question) {
-  activate.allResults(true);
+headerUnderlineWhite[1].style.cssText ='border-bottom: none';
 
+//Проверка на валидность формы
+const valid = new Validate(newsButton, question);
+
+question.value = localStorage.getItem('question');
+if (!!localStorage.getItem('question')) {
   const newsArray = JSON.parse(localStorage.getItem('newsCards'));
-  let cutArr = getArrElements(newsArray);
-  new NewsList(newsContainer, cutArr);
-  activate.activateShowMore(newsArray.length, cutArr.length);
+  const cutArr = getArrElements(newsArray);
 
-  activate.allResults(true); //Показываем блок результата поиска
-  activate.newsResult(true);
+  const newsList = new NewsList(newsContainer, cutArr);
+  newsList.showNews();
+  activate.activateShowMore(showMoreButton, newsArray.length);
+
+  activate.allResults(resultSection, true); //Показываем блок результата поиска
+  activate.newsResult(newsGrid, true);
 
   showMore(showMoreButton, cutArr, newsArray);
 }
@@ -29,27 +44,27 @@ questionForm.addEventListener('submit', showNews);
 
 function showNews(event) {
   event.preventDefault();
+  //Блокируем поля ввода во время отправки запроса
+  question.setAttribute('disabled', true);
+  valid.notValid();
+
   //Очищаем данные в браузере, если они существовали
-  sessionStorage.clear();
   localStorage.clear();
 
-  let q = question.value;
-  q = question.value.replace(/\s+/gi, ' AND ');
-
-  //Сохраняем запрос для обновления страницы
-  sessionStorage.setItem('question', q.replace(/\sAND\s/gi, ' ').replace(/^\w|[а-я]/i, key => key.toUpperCase()));
-
-  //Сохраняем запрос для аналитики
-  localStorage.setItem('question', sessionStorage.getItem('question'));
+  const q = question.value.replace(/\s+/gi, ' AND ');
 
   //Получаем массив новостей
   const news = new NewsApi(newsUrl, q, date, apiKey);
+
+  //Сохраняем запрос для аналитики
+  localStorage.setItem('question', q.replace(/\sAND\s/gi, ' ').replace(/^\w|[а-я]/i, key => key.toUpperCase()));
+
   newsContainer.textContent='';
 
-  activate.noResult(false); //Скрываем блок нулевого результата
-  activate.newsResult(false); //Скрываем блок +результатов поиска
-  activate.loading(true); //Включаем прелоудер
-  activate.allResults(true); //Показываем блок результата поиска
+  activate.noResult(resultNone, false); //Скрываем блок нулевого результата
+  activate.newsResult(newsGrid, false); //Скрываем блок +результатов поиска
+  activate.loading(newsLoading, true); //Включаем прелоудер
+  activate.allResults(resultSection, true); //Показываем блок результата поиска
 
   //Обрабатываем полученный массив
   getCards(news);
@@ -57,24 +72,13 @@ function showNews(event) {
 
 //Возвращаем значения блока "Ничего не найдено"
 document.querySelector('.result__not-found-title').textContent = 'Ничего не найдено';
-let text = document.querySelector('.result__not-found-text');
+const text = document.querySelector('.result__not-found-text');
 text.removeAttribute('style', 'margin-top: 0');
 text.textContent = 'К сожалению по вашему запросу ничего не найдено.';
 
-//Валидация формы
-question.addEventListener('focus', () => {new Validate(newsButton, question)});
+//Применение проверки на валидность формы
+question.addEventListener('focus', () => {valid.listener()});
 question.addEventListener('blur', () => {
-  document.querySelector('.search__error').textContent = "";
-  newsButton.removeAttribute('disabled');
-  newsButton.classList.remove('button_disabled');
-})
-
-import {newsUrl, apiKey} from './js/variables';
-import {date} from './js/time-interval';
-import getCards from './js/get-cards';
-import Validate from './js/class-validation';
-import * as activate from './js/activate-blocks-button';
-import {getArrElements, showMore} from './js/cut-array';
-import NewsApi from './js/class-news-api';
-import NewsList from "./js/class-news-list";
-
+  valid.isValid();
+  valid.removeListener();
+});

@@ -1,6 +1,9 @@
-node_modules/
-logs/
-dist/
+/node_modules
+/logs
+/dist
+/.idea
+.npm
+npm-degub.log*
 *.vscode
 *.git
 *.log

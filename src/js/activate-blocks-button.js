@@ -1,8 +1,5 @@
-'use string'
-
 //Показать/скрыть блок результата поиска
-function allResults(yesResult) {
-  const resultSection = document.querySelector('.result')
+function allResults(resultSection, yesResult) {
   if (yesResult) {
     resultSection.classList.remove('result__hide')
   } else {
@@ -11,8 +8,7 @@ function allResults(yesResult) {
 }
 
 //Включение/выключение прелоудера
-function loading(isLoading) {
-  const newsLoading = document.querySelector('.result__loading');
+function loading(newsLoading, isLoading) {
   if (isLoading) {
     newsLoading.classList.remove('result__hide')
   } else {
@@ -21,8 +17,7 @@ function loading(isLoading) {
 }
 
 //Показать/скрыть блок нулевого поиска
-function noResult(notFound) {
-  const resultNone = document.querySelector('.result__not-found');
+function noResult(resultNone, notFound) {
   if (notFound) {
     resultNone.classList.remove('result__hide')
   } else {
@@ -31,8 +26,7 @@ function noResult(notFound) {
 }
 
 //Показать/скрыть результаты поиска
-function newsResult(isFound) {
-  const newsGrid = document.querySelector('.result__is-found');
+function newsResult(newsGrid, isFound) {
   if (isFound) {
     newsGrid.classList.remove('result__hide')
   } else {
@@ -41,11 +35,11 @@ function newsResult(isFound) {
 }
 
 //Активная/неактивная кнопка "Показать еще"
-function activateShowMore(arrayLength) {
+function activateShowMore(buttonShowMore, arrayLength) {
   if (arrayLength > 0) {
-    document.querySelector('.result__button-more').classList.remove('result__hide')
+    buttonShowMore.classList.remove('result__hide')
   } else {
-    document.querySelector('.result__button-more').classList.add('result__hide')
+    buttonShowMore.classList.add('result__hide')
   }
 }
 

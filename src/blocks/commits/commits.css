@@ -11,12 +11,13 @@
 @import url(./__comment-author-email/commits__comment-author-email.css);
 @import url(./__comment-text/commits__comment-text.css);
 
-@import url(./__dots/commits__dots.css);
-@import url(./__dots-dot/commits__dots-dot.css);
+@import url(./__carousel/commits__carousel.css);
+@import url(./__gradient/commits__gradient.css);
 
 @import url(./__button-more/commits__button-more.css);
 
 .commits {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: #f5f6f7;

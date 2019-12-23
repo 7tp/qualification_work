@@ -1,4 +1,4 @@
-'use strict';
+import Flickity from 'flickity';
 
 const elem = document.querySelector('.main-carousel');
 
@@ -20,5 +20,3 @@ export default function carousel() {
     })
   }
 }
-
-import Flickity from 'flickity';

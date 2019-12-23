@@ -1,5 +1,3 @@
-'use strict';
-
 //------- Получение истории коммитов из GitHub -------
 export default class GitApi {
   constructor(url) {

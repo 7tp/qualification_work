@@ -1,5 +1,3 @@
-'use strict';
-
 //------- Получение информации из News API -------
 export default class NewsApi {
   constructor(url, question, date, key) {
