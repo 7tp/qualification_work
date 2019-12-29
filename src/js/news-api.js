@@ -15,6 +15,5 @@ export default class NewsApi {
         }
         return Promise.reject(`Ошибка при загрузке из сервера ${this.url}: ${res.status}`);
       })
-      .catch(err => console.log(err))
   }
 }

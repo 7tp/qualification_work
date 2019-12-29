@@ -6,22 +6,16 @@ export default class Validate {
     this.question = question;
   }
   listener() {
-    this.question.addEventListener('input', () => {
-      this._validate();
-    })
+    this.question.addEventListener('input', this._validate.bind(this));
   }
-  removeListener() {
-    this.question.removeEventListener('input', () => {
-      this._validate();
-    })
-  }
+  /*removeListener() {
+    this.question.removeEventListener('input', this._validate.bind(this));
+  }*/
   _validate() {
     if (this.question.value.length === 0) {
       this.notValid();
       errorText.textContent = "Это обязательное поле";
-    } else if (this.question.validity.valid) {
-      this.isValid();
-    }
+    } else if (this.question.validity.valid) this.isValid();
   }
   isValid() {
     this.button.removeAttribute('disabled');

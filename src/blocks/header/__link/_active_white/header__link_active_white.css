@@ -1,3 +1,4 @@
 .header__link_active_white {
   color: #fff !important;
+  border-bottom: 3px solid #fff;
 }
