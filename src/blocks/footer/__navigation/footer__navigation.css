@@ -40,7 +40,7 @@
   }
 }
 
-@media screen and (min-width: 646px) and (max-width: 687px) {
+@media screen and (min-width: 646px) and (max-width: 720px) {
   .footer__navigation {
     grid-template-columns: auto;
     grid-gap: 24px;
@@ -48,7 +48,7 @@
     min-width: 500px;
   }
 }
-@media screen and (min-width: 688px) and (max-width: 768px) {
+@media screen and (min-width: 721px) and (max-width: 768px) {
   .footer__navigation {
     grid-gap: 25px;
     margin-left: -61px;

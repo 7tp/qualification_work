@@ -1,5 +1,4 @@
 .commits__button-more {
-  margin: 64px auto 80px auto;
   display: none;
   border: 1px #1a1b22 solid;
 }
@@ -7,6 +6,6 @@
 @media screen and (max-width: 700px) {
   .commits__button-more {
     display: inline;
-    margin: 13px auto 44px auto;
+    margin: 44px auto 0 auto;
   }
 }

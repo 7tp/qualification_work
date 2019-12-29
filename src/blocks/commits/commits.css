@@ -11,27 +11,32 @@
 @import url(./__comment-author-email/commits__comment-author-email.css);
 @import url(./__comment-text/commits__comment-text.css);
 
-@import url(./__dots/commits__dots.css);
-@import url(./__dots-dot/commits__dots-dot.css);
+@import url(./__carousel/commits__carousel.css);
+@import url(./__gradient/commits__gradient.css);
 
 @import url(./__button-more/commits__button-more.css);
 
 .commits {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: #f5f6f7;
-  padding: 72px 104px 0 104px;
+  padding: 72px 0 102px 0;
   text-align: center;
+}
+
+.commits a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 400px) {
   .commits {
-    padding: 32px 16px 32px 16px;
+    padding: 32px 0 32px 0;
   }
 }
 
 @media screen and (min-width: 401px) and (max-width: 880px) {
   .commits {
-    padding: 40px;
+    padding: 40px 0 60px 0;
   }
 }

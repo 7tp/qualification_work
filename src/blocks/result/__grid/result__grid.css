@@ -1,6 +1,6 @@
 .result__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   margin-top: 64px;
 }
@@ -18,17 +18,10 @@
   }
 }
 
-@media screen and (min-width: 535px) and (max-width: 683px) {
+@media screen and (min-width: 535px) and (max-width: 1279px) {
   .result__grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 8px;
     margin-top: 36px;
-  }
-}
-
-@media screen and (min-width: 684px) and (max-width: 832px) {
-  .result__grid {
-    grid-gap: 8px;
-    margin-top: 32px;
   }
 }

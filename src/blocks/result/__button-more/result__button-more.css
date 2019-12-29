@@ -1,6 +1,6 @@
 .result__button-more {
   background-color: #fff;
-  margin: 64px auto 80px auto;
+  margin: 64px auto 0 auto;
 }
 
 .result__button-more:hover {
@@ -9,11 +9,11 @@
 
 @media screen and (max-width: 400px) {
   .result__button-more {
-    margin: 13px auto 44px auto;
+    margin-top: 13px;
   }
 }
 @media screen and (min-width: 401px) and (max-width: 768px) {
   .result__button-more {
-    margin: 32px auto 40px auto;
+    margin-top: 32px;
   }
 }

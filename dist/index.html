@@ -11,15 +11,15 @@
   <meta name="author" content="Руслан Винокуров">
   <title>NewsAnalyzer</title>
 <!---  <link rel="stylesheet" href="style.css"> -->
-  <link rel="stylesheet" href="./css/main.ed9122eb0e5616ae18f5.css?13058c8a9e3c665a3f07">
+  <link rel="stylesheet" href="./css/main.904962fc3b66577d49a6.css?6743b569ee24673ca518">
 </head>
 <body>
   <div class="root">
-    <header class="header header__white">
+    <header class="header header_white">
       <a href="./index.html" class="header__title">NewsAnalyzer</a>
       <nav class="header__menu">
-        <a href="./index.html" class="header__link header__link_white">Главная</a>
-        <a href="./about-project.html" class="header__link header__link_white">О проекте</a>
+        <a href="./index.html" class="header__link header__link_white header__link_active_white">Главная</a>
+        <a href="./about.html" class="header__link header__link_white">О проекте</a>
       </nav>
     </header>
 
@@ -35,22 +35,23 @@
       </div>
       <form class="search__form" name="news">
         <label class="search__form-field">
-          <input type="text" class="search__form-input" placeholder="Введите тему новости" required>
+          <input type="text" name="news_question" class="search__form-input" placeholder="Введите тему новости" required>
+          <span class="text search__error"></span>
         </label>
         <button type="submit" class="button search__form-button">Искать</button>
       </form>
     </section>
 
-    <section class="result">
+    <section class="result result__hide">
 
-      <div class="result__loading">
+      <div class="result__loading result__hide">
         <div class="result__circle-preloader">
           <div class="result__circle-inner"></div>
         </div>
         <div class="result__loading-text text">Идет поиск новостей...</div>
       </div>
 
-      <div class="result__not-found">
+      <div class="result__not-found result__hide">
         <div class="result__not-found-img">
           <img src="./images/not-found_v1.svg" alt="Не найдено">
         </div>
@@ -58,127 +59,36 @@
         <p class="result__not-found-text text">К сожалению по вашему запросу ничего не найдено.</p>
       </div>
 
-      <div class="result__header">
-        <h2 class="result__header-title title">Результаты поиска</h2>
-        <a href="./analyst.html" class="result__header-analyst-link">Посмотреть аналитику
-          <img class="arrow" src="./images/arrow.svg" alt="arrow">
-        </a>
+      <div class="result__is-found result__hide">
+        <div class="result__header">
+            <h2 class="result__header-title title">Результаты поиска</h2>
+            <a href="./analyst.html" class="result__header-analyst-link">Посмотреть аналитику
+              <img class="arrow" src="./images/arrow.svg" alt="arrow">
+            </a>
+          </div>
+
+          <div class="result__grid"></div>
+
+          <button class="button result__button-more result__hide">Показать еще</button>
+
       </div>
 
-      <div class="result__grid">
-        <a class="result__grid-link-insert" href="#" target="_blank">
+      <template id="templateResult">
+        <a class="result__card-link" target="_blank">
           <div class="result__card">
-            <div class="result__card-image">
-              <img src="./images/image_08.jpg" alt="Картинка новости">
-            </div>
+            <div class="result__card-image"></div>
             <div class="result__card-info">
               <div class="result__card-info-text">
-                <div class="result__card-date date">2 августа, 2019</div>
-                <h3 class="result__card-title subtitle">Национальное достояние – парки</h3>
-                <p class="result__card-text text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                <div type="" class="result__card-date date"></div>
+                <h3 class="result__card-title subtitle"></h3>
+                <p class="result__card-text text"></p>
               </div>
-              <div class="result__card-source">Лента.ру</div>
+              <div class="result__card-source"></div>
             </div>
           </div>
         </a>
-        <a class="result__grid-link-insert" href="#" target="_blank">
-          <div class="result__card">
-            <div class="result__card-image">
-              <img src="./images/image_04.jpg" alt="Картинка новости">
-            </div>
-            <div class="result__card-info">
-              <div class="result__card-info-text">
-                <div class="result__card-date date">2 августа, 2019</div>
-                <h3 class="result__card-title subtitle">Лесные огоньки: история одной фотографии</h3>
-                <p class="result__card-text text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-              </div>
-              <div class="result__card-source">Медуза</div>
-            </div>
-          </div>
-        </a>
-        <a class="result__grid-link-insert" href="#" target="_blank">
-          <div class="result__card">
-            <div class="result__card-image">
-              <img src="./images/image_07.jpg" alt="Картинка новости">
-            </div>
-            <div class="result__card-info">
-              <div class="result__card-info-text">
-                <div class="result__card-date date">2 августа, 2019</div>
-                <h3 class="result__card-title subtitle">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                <p class="result__card-text text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где..ksjfjs`dhkfjahkdjshkjdf</p>
-              </div>
-              <div class="result__card-source">РИА</div>
-            </div>
-          </div>
-        </a>
-        <a class="result__grid-link-insert" href="#" target="_blank">
-          <div class="result__card">
-            <div class="result__card-image">
-              <img src="./images/image_08.jpg" alt="Картинка новости">
-            </div>
-            <div class="result__card-info">
-              <div class="result__card_-nfo-text">
-                <div class="result__card-date date">2 августа, 2019</div>
-                <h3 class="result__card-title subtitle">Национальное достояние – парки</h3>
-                <p class="result__card-text text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-              </div>
-              <div class="result__card-source">Дзен</div>
-            </div>
-          </div>
-        </a>
-        <a class="result__grid-link-insert" href="#" target="_blank">
-          <div class="result__card">
-            <div class="result__card-image">
-              <img src="./images/image_04.jpg" alt="Картинка новости">
-            </div>
-            <div class="result__card-info">
-              <div class="result__card-info-text">
-                <div class="result__card-date date">2 августа, 2019</div>
-                <h3 class="result__card-title subtitle">Лесные огоньки: история одной фотографии одной фотографии</h3>
-                <p class="result__card-text text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.
-                    Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где..Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где..
-                </p>
-              </div>
-              <div class="result__card-source">Афиша</div>
-            </div>
-          </div>
-        </a>
-        <a class="result__grid-link-insert" href="#" target="_blank">
-          <div class="result__card">
-            <div class="result__card-image">
-              <img src="./images/image_07.jpg" alt="Картинка новости">
-            </div>
-            <div class="result__card-info">
-              <div class="result__card-info-text">
-                <div class="result__card-date date">2 августа, 2019</div>
-                <h3 class="result__card-title subtitle">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                <p class="result__card-text text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где..Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где..</p>
-              </div>
-              <div class="result__card-source">Медиазона</div>
-            </div>
-          </div>
-        </a>
+      </template>
 
-        <template id="tmpl-search">
-          <a class="result__grid-link-insert" href="#" target="_blank">
-            <div class="result__card">
-              <div class="result__card-image">
-                <img alt="Картинка новости">
-              </div>
-              <div class="result__card-info">
-                <div class="result__card-info-text">
-                  <div type="" class="result__card-date date">2 августа, 2019</div>
-                  <h3 class="result__card-title subtitle"></h3>
-                  <p class="result__card-text text"></p>
-                </div>
-                <div class="result__card-source"></div>
-              </div>
-            </div>
-          </a>
-        </template>
-      </div>
-
-      <button class="button result__button-more">Показать еще</button>
 
     </section>
 
@@ -192,17 +102,18 @@
       <div class="author__description">
         <h2 class="author__description-title title">Об авторе</h2>
         <div class="author__description-text">
-            <p class="text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-            <p class="text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          <p class="text">Меня зовут Винокуров Руслан, начинающий фронтенд-разработчик. Я работаю с HTML, CSS, Java Script, Webpack.</p>
+          <p class="text">За время прохождения курса на Яндекс Практикуме с нуля обучился верстке, подтянул знания по программированию, узнал, как работать с git и собирать универсальный для многих браузеров сайт через сборщик Webpack. Благодрая подаче актуальной информации обнаружил, что JS стал удобным языком программирования. Я воодушевлен, и мне не терпится дальше продолжить знакомство и закрепить знания.</p>
+          <p class="text">e-mail: work@monty.ml</p>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <span class="footer__copyright">&copy; 2019. Supersite</span>
+      <span class="footer__copyright">&copy; 2019. R.Vinokurov</span>
       <nav class="footer__navigation">
         <a href="./index.html" class="footer__navigation-link">Главная</a>
-        <a href="./about-project.html" class="footer__navigation-link">О проекте</a>
+        <a href="./about.html" class="footer__navigation-link">О проекте</a>
         <a href="https://praktikum.yandex.ru" class="footer__navigation-link" target="_blank">Яндекс.Практикум</a>
       </nav>
       <div class="footer__icons">
@@ -218,6 +129,6 @@
   </div>
 
 <!----  <script src="index.js"></script> -->
-  <script src="./js/main.9937008aaf608dfbb7a4.js?13058c8a9e3c665a3f07"></script>
+  <script src="./js/main.2be886b69ff32442cf35.js?6743b569ee24673ca518"></script>
 </body>
 </html>

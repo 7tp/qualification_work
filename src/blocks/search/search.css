@@ -6,6 +6,7 @@
 @import url(./__form-button/search__form-button.css);
 @import url(./__form-field/search__form-field.css);
 @import url(./__form-input/search__form-input.css);
+@import url(./__error/search__error.css);
 
 .search {
   position: relative;

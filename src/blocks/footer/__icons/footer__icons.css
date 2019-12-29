@@ -4,7 +4,7 @@
   grid-gap: 24px;
 }
 
-@media screen and (max-width: 687px) {
+@media screen and (max-width: 720px) {
   .footer__icons {
     align-self: flex-start;
   }

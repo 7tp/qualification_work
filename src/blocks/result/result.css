@@ -21,6 +21,10 @@
 @import url(./__not-found-title/result__not-found-title.css);
 @import url(./__not-found-text/result__not-found-text.css);
 
+@import url(./__is-found/result__is-found.css);
+
+@import url(./__hide/result__hide.css);
+
 .result {
   display: flex;
   flex-direction: column;

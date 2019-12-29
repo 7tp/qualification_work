@@ -1,12 +1,16 @@
 .commits__comment {
   position: relative;
-  width: calc(100% - 48px);
-  height: 240px;
+  width: 352px;
+  height: 244px;
+
   display: flex;
   flex-direction: column;
   background-color: #fff;
   border-radius: 16px;
+
+  margin: 64px 8px 34px 8px;
   padding: 20px 24px 24px 24px;
+
   text-align: left;
   overflow: hidden;
 }
@@ -23,8 +27,9 @@
 
 @media screen and (max-width: 400px) {
   .commits__comment {
-    width: calc(100% - 32px);
+    margin: 16px 4px 4px 4px;
     padding: 16px;
+    width: 256px;
     height: 232px;
   }
 
@@ -35,7 +40,9 @@
 
 @media screen and (min-width: 401px) and (max-width: 768px) {
   .commits__comment {
+    margin: 32px 4px 20px 4px;
     padding: 24px;
+    width: 288px;
     height: 194px;
   }
 }

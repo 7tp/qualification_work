@@ -82,8 +82,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/about-project.html',
-      filename: 'about-project.html'
+      template: './src/about.html',
+      filename: 'about.html'
     }),
     new HtmlWebpackPlugin({
       inject: false,

@@ -21,14 +21,14 @@
   }
 }
 
-@media screen and (min-width: 401px) and (max-width: 687px) {
+@media screen and (min-width: 401px) and (max-width: 720px) {
   .footer {
     flex-wrap: wrap;
     padding: 22px 40px 0 40px;
   }
 }
 
-@media screen and (min-width: 688px) and (max-width: 880px) {
+@media screen and (min-width: 721px) and (max-width: 880px) {
   .footer {
     padding-left: 40px;
     padding-right: 40px;
