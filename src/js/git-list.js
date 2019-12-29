@@ -21,12 +21,12 @@ export default class GitList {
   }
   //Добавление коммитов на страницу
   showCommits() {
-    for (let i = 0; i < this.gitArr.length; i++) {
-      let date = new Date(this.gitArr[i].commit.committer.date);
+    this.gitArr.forEach(element => {
+      let date = new Date(element.commit.committer.date);
       date = `${date.toLocaleString('ru', { month: 'long', day: 'numeric' })}, ${date.getFullYear()}`
 
-      this._addCommits(date, this.gitArr[i].author.avatar_url, this.gitArr[i].commit.committer.name, this.gitArr[i].commit.committer.email, this.gitArr[i].commit.message);
-    }
+      this._addCommits(date, element.author.avatar_url, element.commit.committer.name, element.commit.committer.email, element.commit.message);
+    });
     carousel();
   }
 }

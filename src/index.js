@@ -24,6 +24,8 @@ headerUnderlineWhite[1].style.cssText ='border-bottom: none';
 
 //Проверка на валидность формы
 const valid = new Validate(newsButton, question);
+valid.listener();
+question.addEventListener('blur', () => valid.isValid());
 
 question.value = localStorage.getItem('question');
 if (!!localStorage.getItem('question')) {
@@ -77,8 +79,12 @@ text.removeAttribute('style', 'margin-top: 0');
 text.textContent = 'К сожалению по вашему запросу ничего не найдено.';
 
 //Применение проверки на валидность формы
-question.addEventListener('focus', () => {valid.listener()});
-question.addEventListener('blur', () => {
-  valid.isValid();
-  valid.removeListener();
+/* question.addEventListener('focus', function() {
+  const listener = valid.listener.bind(valid);
+  listener();
 });
+question.addEventListener('blur', function() {
+  const remover = valid.removeListener.bind(valid);
+  remover();
+  valid.isValid();
+}); */

@@ -28,17 +28,13 @@ export default function getCards(cards) {
     if (res.totalResults === 0) { //Если ничего не найдено показываем блок нулевого результата
       activate.noResult(resultNone, true);
       activate.newsResult(newsGrid, false);
-      sessionStorage.clear();
       localStorage.clear();
     } else {
       activate.noResult(resultNone, false);
       activate.newsResult(newsGrid, true)
     }
 
-    //Сохраняем новости для обновления страницы
-    sessionStorage.setItem('newsCards', JSON.stringify(res.articles));
-
-    //Сохраняем информацию для аналитики
+    //Сохраняем информацию для аналитики и обновления страницы
     localStorage.setItem('newsCards', JSON.stringify(res.articles));
     localStorage.setItem('newsInAWeek', res.totalResults);
 
@@ -56,14 +52,14 @@ export default function getCards(cards) {
   .catch(
     err => {
       console.log(err);
-      sessionStorage.clear();
+      activate.loading(newsLoading, false); //Отключаем прелоудер
       localStorage.clear();
       activate.noResult(resultNone, true);
       activate.newsResult(newsGrid, false);
       document.querySelector('.result__not-found-title').textContent = '';
       let text = document.querySelector('.result__not-found-text');
       text.setAttribute('style', 'margin-top: 0');
-      text.textContent = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.';
+      text.textContent = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер не доступен. Подождите немного и попробуйте ещё раз.';
     }
   )
 }

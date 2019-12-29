@@ -1,11 +1,11 @@
 .result__card-text {
   width: 100%;
-  max-height: calc(1.375em * 5);
+  max-height: calc(1.375em * 4);
   margin-top: 16px;
   font-size: 16px;
   line-height: 22px;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }

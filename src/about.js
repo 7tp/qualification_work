@@ -22,7 +22,7 @@ function getCommits() {
       const templateCommit = document.querySelector('#templateCarousel').content.querySelector('.carousel-cell');
       const templateClone = templateCommit.cloneNode(true);
 
-      templateClone.querySelector('.commits__comment-text').textContent = 'Произошла ошибка запроса коммитов. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.';
+      templateClone.querySelector('.commits__comment-text').textContent = 'Произошла ошибка запроса коммитов. Возможно, проблема с соединением или сервер не доступен. Подождите немного и попробуйте ещё раз.';
       templateClone.querySelector('.commits__comment-text').setAttribute('style', 'text-align: center');
 
       commitsSlider.appendChild(templateClone);
