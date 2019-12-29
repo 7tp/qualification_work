@@ -19,11 +19,11 @@ export default class NewsList {
   }
   //Добавление новостей на страницу
   showNews() {
-    for (let i=0; i < this.news.length; i++) {
-      let date = new Date(this.news[i].publishedAt);
+    this.news.forEach(element => {
+      let date = new Date(element.publishedAt);
       date = `${date.toLocaleString('ru', { month: 'long', day: 'numeric' })}, ${date.getFullYear()}`
 
-      this._addNews(this.news[i].url, this.news[i].urlToImage, date, this.news[i].title, this.news[i].description, this.news[i].source.name)
-    }
+      this._addNews(element.url, element.urlToImage, date, element.title, element.description, element.source.name)
+    });
   }
 }

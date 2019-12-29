@@ -4,11 +4,6 @@ const aboutProject = document.querySelector('.about-project');
 const youAsked = document.querySelector('.about-project__title');
 const statistic = document.querySelector('.about-project__statistic');
 const analyst = document.querySelector('.analyst__grid');
-
-const headerUnderlineBlack = document.querySelectorAll('.header__link_black');
-headerUnderlineBlack.forEach(function(underline) {
-  underline.style.cssText ='border-bottom: none';
-});
 const noQuestion = document.createElement('h2');
 
 //Если есть данные по аналитике
@@ -33,7 +28,7 @@ if (!!localStorage.getItem('question')) {
     //Проверка количества ключевыхс слов
     if (question.match(/\s/)) {
       question.split(' ').forEach(function(item) {
-        let regex = new RegExp(item.substr(0, item.length - 1), 'gi');
+        const regex = new RegExp(item.substr(0, item.length - 1), 'gi');
         if (article.title.match(regex)) sum++
       })
     } else {

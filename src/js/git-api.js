@@ -12,6 +12,5 @@ export default class GitApi {
         }
           return Promise.reject(`Ошибка при загрузке коммитов из ${this.url}: ${res.status}`);
       })
-      .catch(err => console.log(err))
   }
 }
