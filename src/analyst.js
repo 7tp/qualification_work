@@ -4,6 +4,7 @@ const aboutProject = document.querySelector('.about-project');
 const youAsked = document.querySelector('.about-project__title');
 const statistic = document.querySelector('.about-project__statistic');
 const analyst = document.querySelector('.analyst__grid');
+
 const noQuestion = document.createElement('h2');
 
 //Если есть данные по аналитике
