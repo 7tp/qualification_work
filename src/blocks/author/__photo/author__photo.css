@@ -10,6 +10,7 @@
 
 .author__photo img {
   width: 100%;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 460px) {

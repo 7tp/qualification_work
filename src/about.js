@@ -1,15 +1,15 @@
 'use strict'
 import "./pages/about.css";
-import {gitUrl} from './js/variables';
-import GitApi from './js/git-api';
-import GitList from './js/git-list';
-import carousel from './js/carousel';
+import {GIT_URL} from './js/constants/variables';
+import GitApi from './js/modules/git-api';
+import GitList from './js/components/git-list';
+import carousel from './js/utils/carousel';
 
 const commitsSlider = document.querySelector('.main-carousel');
-const commits = new GitApi(gitUrl);
+const commits = new GitApi(GIT_URL);
 
-function getCommits() {
-  commits.loadData()
+function getCommitsCards() {
+  commits.getCommits()
     .then(res => {
       const gitList = new GitList(commitsSlider, res);
       gitList.showCommits();
@@ -28,4 +28,4 @@ function getCommits() {
     })
 }
 
-getCommits();
+getCommitsCards();

@@ -3,6 +3,6 @@ const todayDate =`&to=${today.getFullYear()}-${(today.getMonth()+1)}-${today.get
 const week = 7;
 const thatDay = new Date(today.setDate(today.getDate() - week));
 const thatDayDate = `&from=${thatDay.getFullYear()}-${(thatDay.getMonth()+1)}-${thatDay.getDate()}`;
-const date = thatDayDate + todayDate;
+const DATE_INTERVAL = thatDayDate + todayDate;
 
-export {date}
+export {DATE_INTERVAL}

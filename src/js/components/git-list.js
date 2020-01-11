@@ -1,4 +1,4 @@
-import carousel from './carousel'
+import carousel from '../utils/carousel';
 
 // Создание списка коммитов
 export default class GitList {

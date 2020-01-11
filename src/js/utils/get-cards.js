@@ -1,6 +1,6 @@
 import * as activate from './activate-blocks-button';
 import {getArrElements, showMore} from './cut-array';
-import NewsList from './news-list';
+import NewsList from '../components/news-list';
 import Validate from './validation';
 
 const newsContainer = document.querySelector('.result__grid');
@@ -16,7 +16,7 @@ const valid = new Validate(newsButton, question);
 
 //Обрабатываем полученный массив
 export default function getCards(cards) {
-  cards.loadData()
+  cards.getNews()
   .then(res => {
     let cutArr = [];
 
@@ -60,6 +60,8 @@ export default function getCards(cards) {
       const text = document.querySelector('.result__not-found-text');
       text.setAttribute('style', 'margin-top: 0');
       text.textContent = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер не доступен. Подождите немного и попробуйте ещё раз.';
+      question.removeAttribute('disabled', true);
+      valid.isValid();
     }
   )
 }

@@ -12,7 +12,6 @@
     <title>NewsAnalyzer</title>
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.about.css %>">
     <link rel="stylesheet" href="../node_modules/flickity/dist/flickity.min.css" media="screen">
-<!---    <link rel="stylesheet" href="./pages/about.css"> -->
 </head>
 <body>
   <div class="root">
@@ -69,7 +68,8 @@
       <div class="author__photo">
           <picture>
             <source media="(min-width:881px)" srcset="<%=require('./img/avatar.jpg')%>">
-            <img src="<%=require('./img/avatar-small.jpg')%>" alt="photo">
+            <source media="(max-width:880px)" srcset="<%=require('./img/avatar-small.jpg')%>">
+            <img src="<%=require('./img/avatar.jpg')%>" alt="photo">
           </picture>
       </div>
       <div class="author__description">
@@ -137,7 +137,6 @@
   </div>
 
   <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
-<!--  <script src="about.js"></script> -->
   <script src="../node_modules/flickity/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>

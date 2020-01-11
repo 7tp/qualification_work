@@ -4,7 +4,7 @@ export default class GitApi {
     this.url = url
   }
   //Получения информации из сервера
-  loadData() {
+  getCommits() {
     return fetch(`${this.url}`)
       .then(res => {
         if (res.ok) {

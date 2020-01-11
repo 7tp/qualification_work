@@ -1,13 +1,13 @@
 'use strict'
 import "./pages/index.css";
-import {newsUrl, apiKey} from './js/variables';
-import {date} from './js/time-interval';
-import getCards from './js/get-cards';
-import Validate from './js/validation';
-import * as activate from './js/activate-blocks-button';
-import {getArrElements, showMore} from './js/cut-array';
-import NewsApi from './js/news-api';
-import NewsList from "./js/news-list";
+import {NEWS_URL, API_KEY} from './js/constants/variables';
+import {DATE_INTERVAL} from './js/utils/time-interval';
+import getCards from './js/utils/get-cards';
+import Validate from './js/utils/validation';
+import * as activate from './js/utils/activate-blocks-button';
+import {getArrElements, showMore} from './js/utils/cut-array';
+import NewsApi from './js/modules/news-api';
+import NewsList from './js/components/news-list';
 
 const questionForm = document.querySelector('form[name=news]');
 const question = document.querySelector('input[name=news_question]');
@@ -25,6 +25,8 @@ valid.listener();
 question.addEventListener('blur', () => valid.isValid());
 
 question.value = localStorage.getItem('question');
+
+//Если в хранилище браузера есть данные, показываем результаты предыдущего поиска на странице
 if (!!localStorage.getItem('question')) {
   const newsArray = JSON.parse(localStorage.getItem('newsCards'));
   const cutArr = getArrElements(newsArray);
@@ -39,6 +41,7 @@ if (!!localStorage.getItem('question')) {
   showMore(showMoreButton, cutArr, newsArray);
 }
 
+//Новый поиск новостей
 questionForm.addEventListener('submit', showNews);
 
 function showNews(event) {
@@ -53,7 +56,7 @@ function showNews(event) {
   const q = question.value.replace(/\s+/gi, ' AND ');
 
   //Получаем массив новостей
-  const news = new NewsApi(newsUrl, q, date, apiKey);
+  const news = new NewsApi(NEWS_URL, q, DATE_INTERVAL, API_KEY);
 
   //Сохраняем запрос для аналитики
   localStorage.setItem('question', q.replace(/\sAND\s/gi, ' ').replace(/^\w|[а-я]/i, key => key.toUpperCase()));
@@ -74,6 +77,8 @@ document.querySelector('.result__not-found-title').textContent = 'Ничего �
 const text = document.querySelector('.result__not-found-text');
 text.removeAttribute('style', 'margin-top: 0');
 text.textContent = 'К сожалению по вашему запросу ничего не найдено.';
+question.removeAttribute('disabled', true);
+valid.isValid();
 
 //Применение проверки на валидность формы
 /*question.addEventListener('focus', function() {

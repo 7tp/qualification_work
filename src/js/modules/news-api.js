@@ -7,7 +7,8 @@ export default class NewsApi {
     this.key = key
   }
   //Получения информации из сервера
-  loadData() {
+  getNews() {
+    console.log(`${this.url}`,`q=${this.question}`,`${this.date}`,`&pageSize=100&apiKey=${this.key}`);
     return fetch(`${this.url}q=${this.question}${this.date}&pageSize=100&apiKey=${this.key}`)
       .then(res => {
         if (res.ok) {

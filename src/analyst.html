@@ -10,7 +10,6 @@
   <meta name="keywords" content="Webpack, HTML5, CSS, Java Script">
   <meta name="author" content="Руслан Винокуров">
   <title>NewsAnalyzer</title>
-<!---    <link rel="stylesheet" href="style.css"> -->
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.analyst.css %>">
 </head>
 <body>
@@ -41,7 +40,7 @@
       <div class="analyst__grid">
         <div class="analyst__grid-header">
           Дата
-          <div class="analyst__grid-month">(<span class="analyst__date-insert">август</span>)</div>
+          <div class="analyst__grid-month">(<span class="analyst__date-insert"></span>)</div>
         </div>
         <div class="analyst__grid-header">Кол-во упоминаний</div>
         <div class="analyst__grid-scale analyst__grid-scale1">
@@ -98,7 +97,6 @@
 
   </div>
 
-<!---  <script src="index.js"></script> -->
   <script src="<%= htmlWebpackPlugin.files.chunks.analyst.entry %>"></script>
 </body>
 </html>
