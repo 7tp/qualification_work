@@ -13,25 +13,25 @@
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.analyst.css %>">
 </head>
 <body>
-  <div class="root">
+  <main class="main">
     <header class="header header_black">
       <a href="./index.html" class="header__title">NewsAnalyzer</a>
       <nav class="header__menu">
-        <a href="./index.html" class="header__link header__link_black">Главная</a>
-        <a href="./about.html" class="header__link header__link_black">О проекте</a>
+        <a href="./index.html" class="header__link header__link_black header__link_inactive">Главная</a>
+        <a href="./about.html" class="header__link header__link_black header__link_inactive">О проекте</a>
       </nav>
     </header>
 
-    <section class="about-project">
-      <nav class="about-project__navigation">
-          <a href="./index.html" class="about-project__link">Главная</a>
+    <section class="stats">
+      <nav class="stats__navigation">
+          <a href="./index.html" class="stats__link">Главная</a>
           <span> / </span>
-          <a href="./analyst.html" class="about-project__link about-project__link_active">Аналитика</a>
+          <a href="./analyst.html" class="stats__link stats__link_active">Аналитика</a>
       </nav>
-      <h2 class="about-project__title title">Вы спросили: «<span class="about-project__title_insert"></span>»</h2>
-      <div class="about-project__statistic">
-        <p class="text">Новостей за неделю: <span class="about-project__insert" id="week"></span></p>
-        <p class="text">Упоминаний в заголовках: <span class="about-project__insert" id="header"></span></p>
+      <h2 class="stats__title title">Вы спросили: «<span class="stats__title-insert"></span>»</h2>
+      <div class="stats__statistic">
+        <p class="text">Новостей за неделю: <span class="stats__insert" id="week"></span></p>
+        <p class="text">Упоминаний в заголовках: <span class="stats__insert" id="header"></span></p>
       </div>
     </section>
 
@@ -43,7 +43,7 @@
           <div class="analyst__grid-month">(<span class="analyst__date-insert"></span>)</div>
         </div>
         <div class="analyst__grid-header">Кол-во упоминаний</div>
-        <div class="analyst__grid-scale analyst__grid-scale1">
+        <div class="analyst__grid-scale analyst__grid-scale_1">
           <div>0</div>
           <div>25</div>
           <div>50</div>
@@ -68,7 +68,7 @@
           <div class="analyst__grid-pic"><div class="analyst__grid-volume"></div></div>
           <div class="analyst__grid-pic"><div class="analyst__grid-volume"></div></div>
         </div>
-        <div class="analyst__grid-scale analyst__grid-scale2">
+        <div class="analyst__grid-scale analyst__grid-scale_2">
           <div>0</div>
           <div>25</div>
           <div>50</div>
@@ -95,7 +95,7 @@
       </div>
     </footer>
 
-  </div>
+  </main>
 
   <script src="<%= htmlWebpackPlugin.files.chunks.analyst.entry %>"></script>
 </body>

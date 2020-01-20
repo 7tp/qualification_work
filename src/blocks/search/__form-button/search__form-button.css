@@ -1,5 +1,6 @@
 .search__form-button {
   position: absolute;
+  top: 0;
   left: 440px;
   width: 168px;
   color: #fff;
@@ -8,6 +9,10 @@
 
 .search__form-button:hover {
   background-color: #347eff;;
+}
+
+.search__form-button:focus {
+  background-color: #2a65cc;
 }
 
 .search__form-button:active {

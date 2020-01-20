@@ -1,0 +1,21 @@
+@import url(./__title/stats__title.css);
+@import url(./__navigation/stats__navigatiom.css);
+@import url(./__statistic/stats__statistic.css);
+@import url(./__insert/stats__insert.css);
+@import url(./__link/stats__link.css);
+
+.stats {
+  padding-left: 104px;
+}
+
+@media screen and (max-width: 400px) {
+  .stats {
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .stats {
+    padding: 30px 40px 26px 40px;
+  }
+}

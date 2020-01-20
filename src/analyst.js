@@ -1,11 +1,11 @@
 'use strict'
 import "./pages/analyst.css";
-const aboutProject = document.querySelector('.about-project');
-const youAsked = document.querySelector('.about-project__title');
-const statistic = document.querySelector('.about-project__statistic');
+const stats = document.querySelector('.stats');
+const youAsked = document.querySelector('.stats__title');
+const statistic = document.querySelector('.stats__statistic');
 const analyst = document.querySelector('.analyst__grid');
 
-const questionTitle = document.querySelector('.about-project__title_insert');
+const questionTitle = document.querySelector('.stats__title-insert');
 const newsInAWeek = document.querySelector('#week');
 const newsInHeader = document.querySelector('#header');
 const currentMonth = document.querySelector('.analyst__date-insert');
@@ -19,8 +19,8 @@ const noQuestion = document.createElement('h2');
 //Если есть данные по аналитике
 if (!!localStorage.getItem('question')) {
 
-  if (noQuestion.parentNode === aboutProject) {
-    aboutProject.removeChild(noQuestion);
+  if (noQuestion.parentNode === stats) {
+    stats.removeChild(noQuestion);
     youAsked.classList.remove('result__hide');
     statistic.classList.remove('result__hide');
     analyst.classList.remove('result__hide');
@@ -94,8 +94,8 @@ if (!!localStorage.getItem('question')) {
   youAsked.classList.add('result__hide');
   statistic.classList.add('result__hide');
   analyst.classList.add('result__hide');
-  noQuestion.classList.add('about-project__title', 'title');
+  noQuestion.classList.add('stats__title', 'title');
   noQuestion.setAttribute('style', 'margin-bottom: 80px');
   noQuestion.textContent = 'Вы еще ничего не спросили';
-  aboutProject.appendChild(noQuestion);
+  stats.appendChild(noQuestion);
 }

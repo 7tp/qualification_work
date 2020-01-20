@@ -1,12 +1,12 @@
 # Много весит, появится при установке всех необходимых модулей
-/node_modules
+node_modules/
+
+# Обновляемая папка при запуске сборки webpack - npm run build
+dist/
 
 # Системная информация
 /logs
 *.log
-
-# Появится при выполнение команды npm run build
-/dist
 
 # Настройки рабочих директорий Visual Studio Code
 *.vscode

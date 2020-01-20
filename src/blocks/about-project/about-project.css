@@ -1,9 +1,5 @@
 @import url(./__title/about-project__title.css);
 @import url(./__text/about-project__text.css);
-@import url(./__navigation/about-project__navigatiom.css);
-@import url(./__statistic/about-project__statistic.css);
-@import url(./__insert/about-project__insert.css);
-@import url(./__link/about-project__link.css);
 
 .about-project {
   padding-left: 104px;

@@ -1,4 +1,4 @@
-const errorText = document.querySelector('.search__error');
+const errorText = document.querySelector('.search__form-error');
 
 export default class Validate {
   constructor(button, question) {
