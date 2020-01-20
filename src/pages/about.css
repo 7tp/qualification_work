@@ -1,6 +1,6 @@
 @import url(../vendor/fonts.css);
 @import url(../vendor/normalize.css);
-@import url(../blocks/root/root.css);
+@import url(../blocks/main/main.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/button/button.css);
 @import url(../blocks/title/title.css);
@@ -13,3 +13,4 @@
 @import url(../blocks/author/author.css);
 @import url(../blocks/commits/commits.css);
 @import url(../blocks/footer/footer.css);
+@import url(../../node_modules/flickity/dist/flickity.min.css);

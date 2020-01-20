@@ -1,3 +1,6 @@
+@import url(./_position/_top/analyst__grid-scale_position_top.css);
+@import url(./_position/_bottom/analyst__grid-scale_position_bottom.css);
+
 .analyst__grid-scale {
   display: flex;
   flex-direction: row;
