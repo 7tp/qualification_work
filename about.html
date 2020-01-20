@@ -10,17 +10,16 @@
     <meta name="keywords" content="Webpack, HTML5, CSS, Java Script">
     <meta name="author" content="Руслан Винокуров">
     <title>NewsAnalyzer</title>
-    <link rel="stylesheet" href="./css/about.51ad1e2a03cb89743175.css?b395fc97a62975e53ddc">
+    <link rel="stylesheet" href="./css/about.f876ce4f108cf890460b.css?d93a3ecc20e0786508ae">
     <link rel="stylesheet" href="../node_modules/flickity/dist/flickity.min.css" media="screen">
-<!---    <link rel="stylesheet" href="./pages/about.css"> -->
 </head>
 <body>
-  <div class="root">
+  <main class="main">
     <header class="header header_black">
       <a href="./index.html" class="header__title">NewsAnalyzer</a>
       <nav class="header__menu">
-        <a href="./index.html" class="header__link header__link_black">Главная</a>
-        <a href="./about.html" class="header__link header__link_black header__link_active_black">О проекте</a>
+        <a href="./index.html" class="header__link header__link_black header__link_inactive">Главная</a>
+        <a href="./about.html" class="header__link header__link_black">О проекте</a>
       </nav>
     </header>
 
@@ -69,7 +68,8 @@
       <div class="author__photo">
           <picture>
             <source media="(min-width:881px)" srcset="./images/avatar.jpg">
-            <img src="./images/avatar-small.jpg" alt="photo">
+            <source media="(max-width:880px)" srcset="./images/avatar-small.jpg">
+            <img src="./images/avatar.jpg" alt="photo">
           </picture>
       </div>
       <div class="author__description">
@@ -97,8 +97,6 @@
         </div>
       </div>
 
-
-
       <a href="https://github.com/7tp/qualification_work" target="_blank"><button class="button commits__button-more">Открыть в GitHub</button></a>
 
      <template id="templateCarousel">
@@ -115,7 +113,7 @@
         </div>
       </template>
 
-      </section>
+    </section>
 
     <footer class="footer">
       <span class="footer__copyright">&copy; 2019. R.Vinokurov</span>
@@ -134,10 +132,9 @@
       </div>
     </footer>
 
-  </div>
+  </main>
 
-  <script src="./js/about.ad843d37570f4b52f5ea.js?b395fc97a62975e53ddc"></script>
-<!--  <script src="about.js"></script> -->
+  <script src="./js/about.8ed0d9d11435569e29c3.js?d93a3ecc20e0786508ae"></script>
   <script src="../node_modules/flickity/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>
