@@ -13,3 +13,4 @@
 @import url(../blocks/author/author.css);
 @import url(../blocks/commits/commits.css);
 @import url(../blocks/footer/footer.css);
+@import url(../../node_modules/flickity/dist/flickity.min.css);
