@@ -21,9 +21,9 @@
 
 ## Автор
 
-Винокуров Руслан
+Яковлева Ирина
 
-e-mail: work@monty.ml
+e-mail: irinatrifonovna@gmail.com
 
 
 Версия: 0.0.1
