@@ -1,0 +1,12 @@
+.search__form-error {
+  position: absolute;
+  top: -55px;
+  left: 19px;
+  color: #FF0000;
+}
+
+@media screen and (max-width: 768px) {
+  .search__form-error {
+    top: -48px;
+  }
+}
