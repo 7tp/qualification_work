@@ -33,17 +33,27 @@ if (!!localStorage.getItem('question')) {
   //Выводим количество новостей с ключевым словом за неделю
   newsInAWeek.textContent = localStorage.getItem('newsInAWeek');
 
+  let regex = '';
+
   //------Подсчет количества упоминаний ключевого слова в заголовках за неделю-----
   newsInHeader.textContent = articles.reduce((sum, article) => {
     //Проверка количества ключевых слов
     if (question.match(/\s/)) {
       question.split(' ').forEach(item => {
-        const regex = new RegExp(item.substr(0, item.length - 1), 'gi');
+        if (item.length > 3) { //Если длина слова больше 3 букв, рассматриваем склоняемость по падежам
+          regex = new RegExp(item.substr(0, item.length - 1), 'gi');
+        } else {
+          regex = new RegExp(item, 'gi');
+        }
         if (article.title.match(regex)) sum++
       })
-    } else {
-      const regex = new RegExp(question.substr(0, question.length - 1), 'gi')
-      if (article.title.match(regex)) sum++
+    } else {//Если ключевое слово одно
+        if (question.length > 3) { //Если длина слова больше 3 букв, рассматриваем склоняемость по падежам
+          regex = new RegExp(question.substr(0, question.length - 1), 'gi');
+        } else {
+          regex = new RegExp(question, 'gi');
+        }
+        if (article.title.match(regex)) sum++
     }
     return sum
   }, 0)
@@ -69,14 +79,24 @@ if (!!localStorage.getItem('question')) {
         //Проверка количества ключевыхс слов
         if (question.match(/\s/)) {
           question.split(' ').forEach(item => {
-            const regex = new RegExp(item.substr(0, item.length - 1), 'gi');
+            if (item.length > 3) { //Если длина слова больше 3 букв, рассматриваем склоняемость по падежам
+              regex = new RegExp(item.substr(0, item.length - 1), 'gi');
+            } else {
+              regex = new RegExp(item, 'gi');
+            }
             if (article.title.match(regex)) sum++;
-            if (article.description.match(regex)) sum++
+            if (article.description.match(regex)) sum++;
+            console.log('title', article.title.match(regex), 'description', article.description.match(regex));
           })
         } else {//Если ключевое слово одно
-          const regex = new RegExp(question.substr(0, question.length - 1), 'gi')
+          if (question.length > 3){//Если длина слова больше 3 букв, рассматриваем склоняемость по падежам
+            regex = new RegExp(question.substr(0, question.length - 1), 'gi');
+          } else {
+            regex =  new RegExp(question, 'gi');
+          }
           if (article.title.match(regex)) sum++;
-          if (article.description.match(regex)) sum++
+          if (article.description.match(regex)) sum++;
+          console.log('title', article.title.match(regex), 'description', article.description.match(regex));
         }
       }
 
