@@ -18,9 +18,16 @@
   }
 }
 
-@media screen and (min-width: 535px) and (max-width: 1279px) {
+@media screen and (min-width: 535px) and (max-width: 767px) {
   .result__grid {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    margin-top: 36px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .result__grid {
     grid-gap: 8px;
     margin-top: 36px;
   }

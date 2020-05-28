@@ -1,6 +1,6 @@
 import {activateShowMore} from './activate-blocks-button';
 import NewsList from "../components/news-list";
-const wideWindowWidth = 1280;
+const wideWindowWidth = 768;
 const veryThinWindowWidth = 534;
 const cardsForWideWidth = 3;
 const cardForThinWidth = 4;
